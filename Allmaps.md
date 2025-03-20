@@ -2,6 +2,8 @@
 
 ## Allmaps Editor
 
+![Image](images/georef_nz1_start.png)
+
 ## Masking
 
 ## Ground Control Points
@@ -18,3 +20,4 @@ Allmaps Viewer offers a little more functionalities to reflect the result:
 - Via the "D" key you can display distortions: surface deformation, angle distortion, or no distortion.
 - You can browse through the "[" and] keys through the different maps (for compound objects).
 - Via a right click on a card you can adjust the order of the map layers.
+
