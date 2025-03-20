@@ -44,9 +44,16 @@ For much more information, I recommend [*Georeferencing and Georectification*](h
 
 ## What is IIIF?
 
+IIIF (pronounced “triple-eye-eff”), or the [International Image Interoperability Framework](https://iiif.io/), 
+is a set of open standards for delivering high-quality, attributed digital objects online at scale. 
+IIIF is a way to standardize the delivery of images and audio/visual files from servers to different 
+environments on the Web where they can then be viewed and interacted with in many ways.
+([source](https://iiif.io/get-started/how-iiif-works/)) 
 
 
 ## Finding IIIF maps to use in Allmaps
+
+
 
 ## Images
 
