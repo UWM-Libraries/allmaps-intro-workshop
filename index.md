@@ -13,6 +13,12 @@ maps with the [Allmaps](allmaps.org) platform.
 * View the georeferenced map in Viewer 
 * Use the Georeferenced map in GIS
 
+## Lessons
+
+- [Georeferencing and IIIF](/Georef-and-IIIF.md)
+- [Using Allmaps to Georeference Maps](/Allmaps.md)
+- [Viewing and Using Maps Georeferenced in Allmaps](/Viewer.md)
+
 ## Resources
 
 * [Allmaps Documentation Site](https://allmaps.org/docs/introduction)
