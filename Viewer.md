@@ -1,4 +1,4 @@
-## Doing more with Allmaps
+# Doing more with Allmaps
 
 ## Viewing stitched atlas sheets
 

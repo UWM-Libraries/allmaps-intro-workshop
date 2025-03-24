@@ -9,8 +9,6 @@ the [AGSL Digital Map Collection](https://uwm.edu/lib-collections/agsl-digital-m
 In fact, any map in our collection can be used.
 Furthermore, maps from any collection that uses IIIF, the International Image Interoperability Framework.
 
-The IIIF consortium lists some collections [at this link](https://iiif.io/guides/finding_resources/). Note some very well known map collections including the [Library of Congress](https://www.loc.gov/maps) and [The David Rumsey Map Collection](https://www.davidrumsey.com/luna/servlet/view/all).
-
 
 ## Georeferencing
 
@@ -51,8 +49,15 @@ environments on the Web where they can then be viewed and interacted with in man
 ([source](https://iiif.io/get-started/how-iiif-works/)) 
 
 
-## Finding IIIF maps to use in Allmaps
+### Finding IIIF maps to use in Allmaps
 
+Allmaps works best with large geographic scale, such as maps of neighborhoods, cities, states, or countries. While you can georeference small scale maps like world maps, the distortion that can be introduced by the georeferencing process can make them harder, not easier, to work with.
+Allmaps excels at georeferencing city atlases containing multiple sheets collectively covering an area. 
+
+Any map that is hosted using IIIF will work in Allmaps.
+The IIIF consortium lists some collections [at this link](https://iiif.io/guides/finding_resources/). Note some very well known map collections including the [Library of Congress](https://www.loc.gov/maps) and [The David Rumsey Map Collection](https://www.davidrumsey.com/luna/servlet/view/all).
+
+If you launch the Allmaps Editor [(editor.allmaps.org)](https://editor.allmaps.org), some maps hosted by some Allmaps partners (including the AGSL) that are waiting to be georeferenced are displayed.
 
 
 ## Images
