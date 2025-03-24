@@ -31,17 +31,29 @@ Much of the time, your mask will be one rectangle just inside the neatline.
 
 ## Ground Control Points
 
+Ground control points (GCPs) guide Allmaps in aligning the scanned map on the left side of the screen with the real-world geography on the right side.
+
+To create a GCP, find a location that clearly matches on both sides—like an unchanged street intersection or the corner of a lasting building. Click that same spot on both sides of the editor.
+
+![Image](images/georef_nz2_GCP.png)
+
+### GCP Best Practices:
+
+**Avoid water bodies**—they change too much over time to trust for georeferencing
+
+**Roads and buildings are useful**—as long as roads and buildings haven't been torn down or paved over, these are your safest bet for identifying a shared location between past and present
+
+**Check your progress**—sometimes it only takes a few points to successfully georeference a map. Furthermore, adding too many points can actually create undesirable distortions in the warped image. As you georeference your map, check your progress along the way (for example, maybe at 5 GCPs and again at 10 GCPs)
+
+(From https://cartinal.leventhalmap.org/guides/georeferencing-with-allmaps.html#best-practices-for-creating-gcps)
+
+### What is this doing?
+
+
+
+
 ## Results
 
-Allmaps Viewer offers a little more functionalities to reflect the result:
 
-- Via the "space" button you can make the map transparent.
-- Via the "B" button or the right button you can partially remove the background color.
-- You can display the mask via the M key.
-- You can change the transformation algorithm via the "T" key.
-- Via the "G" key you can display a grid over the image.
-- Via the "D" key you can display distortions: surface deformation, angle distortion, or no distortion.
-- You can browse through the "[" and] keys through the different maps (for compound objects).
-- Via a right click on a card you can adjust the order of the map layers.
 
  
