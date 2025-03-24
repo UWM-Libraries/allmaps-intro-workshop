@@ -2,6 +2,8 @@
 
 ## Allmaps Editor
 
+If you haven't already, launch the Allmaps editor by going to [(editor.allmaps.org)](https://editor.allmaps.org).
+
 ![Image](images/georef_nz1_start.png)
 
 ## Masking

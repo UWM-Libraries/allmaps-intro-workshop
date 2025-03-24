@@ -59,7 +59,11 @@ The IIIF consortium lists some collections [at this link](https://iiif.io/guides
 
 If you launch the Allmaps Editor [(editor.allmaps.org)](https://editor.allmaps.org), some maps hosted by some Allmaps partners (including the AGSL) that are waiting to be georeferenced are displayed.
 
+If you're on the [AGSL Digital Map Collection](https://uwm.edu/lib-collections/agsl-digital-map-collection/) site and have a particular map you would like to georefernece, you need to find its IIIF Manifest URL. 
+You can find this at the bottom of the page of any object. 
 
-## Images
+Other websites may require a bit more sluthing to find the URL. On the David Rumsey Collection you will find the URL under the share menu. Other websites may not expose their manifest URLs at all, but you can use tools like the [DetectIIIF browser](https://seige.digital/en/detektiiif/) extension to help.
 
 ![Screenshot of the menu option to find IIIF Manifessts in the David Rumsey Map Collection Luna Viewer](images/rumsey.png)
+
+[Back to homepage](/index.md) | [Next Lesson: Georeferencing in Allmaps](/Allmaps.md)
