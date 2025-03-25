@@ -1,17 +1,32 @@
 # Doing more with Allmaps
 
+## Allmaps Viewer
+
+Allmaps Viewer is used for viewing georeferenced maps in Allmaps. Similar to the results tab of editor, you can view the map overlaid on a web map.
+Viewer has a vew more tools that you can use to change the appearance and functionality of the map.
+
+The most common tools are on the bottom of the page and look like small dials. They control layer transparency/opacity and background removal.
+
+Background Removal is particularly useful with historical maps because it allows us to overlay the map data while not showing the blank space on the paper.
+
+![Image](images/georef_nz8_Background.png)
+
+Other functionalities and keyboard shortcuts include:
+
+- Toggle transparency on and off with `Space`
+- Toggle background removal with `B`
+- Display the mask with the `M`
+- Change the transformation algorithm with `T`
+- Display a grid over the image with `G`
+- Use `D` to cycle display of distortions: surface deformation, angle distortion, or no distortion.
+
+For objects with multiple maps:
+
+- `[` and `]` keys cycle through the different maps
+- `right click` on a map to adjust the order of the map layers
+
 ## Viewing stitched atlas sheets
 
-Allmaps Viewer offers a little more functionalities to reflect the result:
-
-- Via the "space" button you can make the map transparent.
-- Via the "B" button or the right button you can partially remove the background color.
-- You can display the mask via the M key.
-- You can change the transformation algorithm via the "T" key.
-- Via the "G" key you can display a grid over the image.
-- Via the "D" key you can display distortions: surface deformation, angle distortion, or no distortion.
-- You can browse through the "[" and] keys through the different maps (for compound objects).
-- Via a right click on a card you can adjust the order of the map layers.
 
 ## Changing Transformation Algorithm
 
