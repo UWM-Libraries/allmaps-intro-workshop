@@ -27,6 +27,19 @@ For objects with multiple maps:
 
 ## Viewing stitched atlas sheets
 
+I've been working on: https://collections.lib.uwm.edu/iiif/info/agdm/36112/manifest.json
+
+You can see if a map in a set has already been georeferenced by looking for the green symbol:
+
+![Image](images/MultiPageGreen.png)
+
+And if someone has already created a mask but hasn't started Georeferencing, it will show a yellow warning:
+
+![Image](images/MultiPageYellow.png)
+
+Using viewer, you can see the pages stitched together:
+
+![Image](images/MultiPageStitch.png)
 
 ## Changing Transformation Algorithm
 

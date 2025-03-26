@@ -56,6 +56,10 @@ As you georeference your map, check your progress along the way
 
 (From https://cartinal.leventhalmap.org/guides/georeferencing-with-allmaps.html#best-practices-for-creating-gcps)
 
+Things change! While georeferencing some maps that we will see in a later example, I found that perhaps using Brown Deer Road wasn't the best option:
+
+![Image](images/MultiPage_BrownDeer.png)
+
 ### What is this doing?
 
 Behind the scenes, creating ground control points in Allmaps is creating a [Georeference Annotation](https://iiif.io/api/extension/georef/).
