@@ -5,8 +5,8 @@ title: Georeferencing in Allmaps
 
 <link rel="stylesheet" href="assets/css/custom.css">
 
+<a href="index.html" class="button">Back to Home</a>
 <div class="button-group">
-  <a href="index.html" class="button">Back to Home</a>
   <a href="Georef-and-IIIF.html" class="button">Previous Lesson: Georeferencing in Allmaps</a>
   <a href="Viewer.html" class="button">Next Lesson: Doing More with Allmaps</a>
 </div>
@@ -107,7 +107,7 @@ We will be working in Allmaps Viewer for the next portion, so try visiting the "
 * * *
 
 <div class="button-group">
-  <a href="index.html" class="button">Back to Home</a>
   <a href="Georef-and-IIIF.html" class="button">Previous Lesson: Georeferencing in Allmaps</a>
   <a href="Viewer.html" class="button">Next Lesson: Doing More with Allmaps</a>
 </div>
+<a href="index.html" class="button">Back to Home</a>
