@@ -66,17 +66,17 @@ a:hover {
 
 /* Footer */
 .site-footer {
-  margin-top: 3rem;
-  padding: 1.5rem 2rem;
-  font-size: 0.9rem;
-  text-align: center;
+  background-color: #ffbd00;
   color: #000;
-  border-top: 2px solid #000;
-  background-color: #FEF2DA;
+  padding: 1rem 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  border-top: 4px solid #000;
 }
 
 .site-footer a {
   color: #0000EE;
+  text-decoration: underline;
 }
 
 /* Responsive images */
@@ -89,4 +89,13 @@ img {
   padding: 4px;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.uwm-logo {
+  max-height: 60px;
+  margin-bottom: 1rem;
+}
+
+body {
+  font-family: 'Open Sans', system-ui, sans-serif;
 }
