@@ -4,7 +4,7 @@
 body {
   background-color: #FEF2DA;  /* UWM Cream */
   color: #000;                /* Panther Black */
-  font-family: system-ui, sans-serif;
+  font-family: 'Open Sans', system-ui, sans-serif;
   line-height: 1.6;
   max-width: 800px;
   margin: 0 auto;
@@ -13,10 +13,29 @@ body {
 
 /* Header Styles */
 .site-header {
+  width: 100%;
+  max-width: none;
   background-color: #ffbd00;  /* UWM Gold */
   border-bottom: 4px solid #000;
-  text-align: center;
   padding: 1.5rem 2rem;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.uwm-logo {
+  max-height: 60px;
+}
+
+.header-text {
+  text-align: left;
 }
 
 .site-header h1 {
@@ -74,12 +93,15 @@ a:hover {
 
 /* Footer */
 .site-footer {
+  width: 100%;
+  max-width: none;
   background-color: #ffbd00;
   color: #000;
   padding: 1rem 2rem;
   text-align: center;
   font-size: 0.9rem;
   border-top: 4px solid #000;
+  box-sizing: border-box;
 }
 
 .site-footer a {
@@ -99,11 +121,15 @@ img {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.uwm-logo {
-  max-height: 60px;
-  margin-bottom: 1rem;
-}
+/* Mobile adjustments */
+@media (max-width: 600px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 
-body {
-  font-family: 'Open Sans', system-ui, sans-serif;
+  .header-text {
+    text-align: center;
+  }
 }
