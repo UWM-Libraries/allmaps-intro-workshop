@@ -5,7 +5,7 @@ title: Georeferencing in Allmaps
 
 <link rel="stylesheet" href="assets/css/custom.css">
 
-<div style="display: flex; justify-content: center; gap: 1em; flex-wrap: wrap; margin: 1.5em 0;">
+<div class="button-group">
   <a href="index.html" class="button">Back to Home</a>
   <a href="Georef-and-IIIF.html" class="button">Previous Lesson: Georeferencing in Allmaps</a>
   <a href="Viewer.html" class="button">Next Lesson: Doing More with Allmaps</a>
@@ -106,7 +106,7 @@ We will be working in Allmaps Viewer for the next portion, so try visiting the "
 
 * * *
 
-<div style="display: flex; justify-content: center; gap: 1em; flex-wrap: wrap; margin: 1.5em 0;">
+<div class="button-group">
   <a href="index.html" class="button">Back to Home</a>
   <a href="Georef-and-IIIF.html" class="button">Previous Lesson: Georeferencing in Allmaps</a>
   <a href="Viewer.html" class="button">Next Lesson: Doing More with Allmaps</a>

@@ -5,7 +5,7 @@ title: Doing more with Allmaps
 
 <link rel="stylesheet" href="assets/css/custom.css">
 
-<div style="display: flex; justify-content: center; gap: 1em; flex-wrap: wrap; margin: 1.5em 0;">
+<div class="button-group">
     <a href="index.html" class="button">Back to Home</a>
     <a href="Allmaps.html" class="button">Previous Lesson: Georeferencing in Allmaps</a>
 </div>
@@ -113,7 +113,7 @@ Here you will find out how to do things like...
 
 * * *
 
-<div style="display: flex; justify-content: center; gap: 1em; flex-wrap: wrap; margin: 1.5em 0;">
+<div class="button-group">
     <a href="index.html" class="button">Back to Home</a>
     <a href="Allmaps.html" class="button">Previous Lesson: Georeferencing in Allmaps</a>
 </div>

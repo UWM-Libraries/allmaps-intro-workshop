@@ -64,6 +64,14 @@ a:hover {
   color: #fff;
 }
 
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
 /* Footer */
 .site-footer {
   background-color: #ffbd00;

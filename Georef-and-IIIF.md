@@ -5,7 +5,7 @@ title: Georeferencingt and IIIF
 
 <link rel="stylesheet" href="assets/css/custom.css">
 
-<div style="display: flex; justify-content: center; gap: 1em; flex-wrap: wrap; margin: 1.5em 0;">
+<div class="button-group">
     <a href="index.html" class="button">Back to Home</a>
     <a href="Allmaps.html" class="button">Next Lesson: Georeferencing in Allmaps</a>
 </div>
@@ -80,7 +80,7 @@ Other websites may require a bit more sluthing to find the URL. On the David Rum
 
 * * *
 
-<div style="display: flex; justify-content: center; gap: 1em; flex-wrap: wrap; margin: 1.5em 0;">
+<div class="button-group">
     <a href="index.html" class="button">Back to Home</a>
     <a href="Allmaps.html" class="button">Next Lesson: Georeferencing in Allmaps</a>
 </div>
