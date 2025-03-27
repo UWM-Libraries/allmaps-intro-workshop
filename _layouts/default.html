@@ -7,8 +7,17 @@
     <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
   </head>
   <body>
+    <header class="site-header">
+      <h1>{{ site.title }}</h1>
+      <p class="tagline">{{ site.description }}</p>
+    </header>
+
     <main class="content">
       {{ content }}
     </main>
+
+    <footer class="site-footer">
+      <p>© {{ site.time | date: '%Y' }} UWM Libraries · <a href="https://uwm.edu/libraries/">uwm.edu/libraries</a></p>
+    </footer>
   </body>
 </html>
