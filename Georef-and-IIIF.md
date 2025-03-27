@@ -4,8 +4,10 @@ layout: default
 
 <link rel="stylesheet" href="assets/css/custom.css">
 
-<a href="index.html" class="button">Back to Home</a>
-<a href="Allmaps.html" class="button">Next Lesson: Georeferencing in Allmaps</a>
+<div style="display: flex; justify-content: center; gap: 1em; flex-wrap: wrap; margin: 1.5em 0;">
+    <a href="index.html" class="button">Back to Home</a>
+    <a href="Allmaps.html" class="button">Next Lesson: Georeferencing in Allmaps</a>
+</div>
 
 # Lesson 1: Georeferencing and IIIF
 
@@ -75,11 +77,16 @@ Other websites may require a bit more sluthing to find the URL. On the David Rum
 
 ![Screenshot of the menu option to find IIIF Manifessts in the David Rumsey Map Collection Luna Viewer](images/rumsey.png)
 
-<a href="index.md" class="button">Back to Home</a>
-<a href="Allmaps.md" class="button">Next Lesson: Georeferencing in Allmaps</a>
+* * *
+
+<div style="display: flex; justify-content: center; gap: 1em; flex-wrap: wrap; margin: 1.5em 0;">
+    <a href="index.html" class="button">Back to Home</a>
+    <a href="Allmaps.html" class="button">Next Lesson: Georeferencing in Allmaps</a>
+</div>
+
 
 ## License
 
-[MIT License](/LICENSE)
+[MIT License](https://github.com/UWM-Libraries/allmaps-intro-workshop/blob/main/LICENSE)
 
 Copyright (c) 2025 UWM Libraries

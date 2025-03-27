@@ -4,9 +4,10 @@ layout: default
 
 <link rel="stylesheet" href="assets/css/custom.css">
 
-<a href="index.md" class="button">Back to Home</a>
-<a href="Allmaps.md" class="button">Previous Lesson: Georeferencing in Allmaps</a>
-
+<div style="display: flex; justify-content: center; gap: 1em; flex-wrap: wrap; margin: 1.5em 0;">
+    <a href="index.html" class="button">Back to Home</a>
+    <a href="Allmaps.html" class="button">Previous Lesson: Georeferencing in Allmaps</a>
+</div>
 
 # Lesson 3: Doing more with Allmaps
 
@@ -109,11 +110,15 @@ Here you will find out how to do things like...
 - Georeference based on toponyms (placenames)
 - Learn more about the code behind Allmaps and more!
 
-<a href="index.md" class="button">Back to Home</a>
-<a href="Allmaps.md" class="button">Previous Lesson: Georeferencing in Allmaps</a>
+* * *
+
+<div style="display: flex; justify-content: center; gap: 1em; flex-wrap: wrap; margin: 1.5em 0;">
+    <a href="index.html" class="button">Back to Home</a>
+    <a href="Allmaps.html" class="button">Previous Lesson: Georeferencing in Allmaps</a>
+</div>
 
 ## License
 
-[MIT License](/LICENSE)
+[MIT License](https://github.com/UWM-Libraries/allmaps-intro-workshop/blob/main/LICENSE)
 
 Copyright (c) 2025 UWM Libraries

@@ -4,9 +4,11 @@ layout: default
 
 <link rel="stylesheet" href="assets/css/custom.css">
 
-<a href="index.md" class="button">Back to Home</a>
-<a href="Georef-and-IIIF.md" class="button">Previous Lesson: Georeferencing in Allmaps</a>
-<a href="Viewer.md" class="button">Next Lesson: Doing More with Allmaps</a>
+<div style="display: flex; justify-content: center; gap: 1em; flex-wrap: wrap; margin: 1.5em 0;">
+  <a href="index.html" class="button">Back to Home</a>
+  <a href="Georef-and-IIIF.html" class="button">Previous Lesson: Georeferencing in Allmaps</a>
+  <a href="Viewer.html" class="button">Next Lesson: Doing More with Allmaps</a>
+</div>
 
 # Lesson 2: Georeferencing in Allmaps
 
@@ -101,14 +103,16 @@ The share button will give us some links for viewing the map in Allmaps Viewer, 
 
 We will be working in Allmaps Viewer for the next portion, so try visiting the "View in Allmaps Viewer" link in the share menu.
 
-<a href="index.md" class="button">Back to Home</a>
-<a href="Georef-and-IIIF.md" class="button">Previous Lesson: Georeferencing in Allmaps</a>
-<a href="Viewer.md" class="button">Next Lesson: Doing More with Allmaps</a>
+* * *
 
-[Back to homepage](/index.md) | [Previous Lesson: Georeferencing and IIIF](/Allmaps.md) | [Next Lesson: Doing more with Allmaps](/Viewer.md)
+<div style="display: flex; justify-content: center; gap: 1em; flex-wrap: wrap; margin: 1.5em 0;">
+  <a href="index.html" class="button">Back to Home</a>
+  <a href="Georef-and-IIIF.html" class="button">Previous Lesson: Georeferencing in Allmaps</a>
+  <a href="Viewer.html" class="button">Next Lesson: Doing More with Allmaps</a>
+</div>
 
 ## License
 
-[MIT License](/LICENSE)
+[MIT License](https://github.com/UWM-Libraries/allmaps-intro-workshop/blob/main/LICENSE)
 
 Copyright (c) 2025 UWM Libraries
