@@ -1,8 +1,8 @@
 /* --- Layout Enhancements --- */
 
 .site-header {
-  background-color: #ffbd00;
-  color: #000;
+  background-color: #ffbd00 !important; /* UWM Gold */
+  color: #000 !important;
   padding: 1.5rem 2rem;
   text-align: center;
   border-bottom: 4px solid #000;
