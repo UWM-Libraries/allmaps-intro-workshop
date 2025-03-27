@@ -2,8 +2,7 @@
 
 /* Global Styles */
 body {
-  background-color: #FEF2DA;  /* UWM Cream */
-  color: #000;                /* Panther Black */
+  color: #000;
   font-family: 'Open Sans', system-ui, sans-serif;
   line-height: 1.6;
   max-width: 800px;
