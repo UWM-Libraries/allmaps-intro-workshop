@@ -3,6 +3,8 @@ layout: default
 title: Allmaps Workshop
 ---
 
+<link rel="stylesheet" href="assets/css/custom.css">
+
 # Georeferencing Maps with Allmaps
 
 This is an introductory workshop focused on georeferencing
