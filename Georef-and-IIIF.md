@@ -70,4 +70,4 @@ Other websites may require a bit more sluthing to find the URL. On the David Rum
 
 ![Screenshot of the menu option to find IIIF Manifessts in the David Rumsey Map Collection Luna Viewer](images/rumsey.png)
 
-[Back to homepage](/index.md) | [Next Lesson: Georeferencing in Allmaps](/Allmaps.md)
+<a href="index.md" class="btn">Back to Home</a> | <a href="Allmaps.md" class="btn">Next Lesson: Georeferencing in Allmaps</a>
