@@ -99,4 +99,4 @@ Here you will find out how to do things like...
 - Georeference based on toponyms (placenames)
 - Learn more about the code behind Allmaps and more!
 
-
+[Back to homepage](/index.md) | [Previous Lesson: Georeferencing in Allmaps](/Allmaps.md)
