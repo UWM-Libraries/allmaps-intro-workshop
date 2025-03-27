@@ -84,5 +84,9 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
-  margin: 1rem auto;
+  margin: 1.5rem auto;
+  border: 1px solid #ccc;
+  padding: 4px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
