@@ -43,8 +43,34 @@ Using viewer, you can see the pages stitched together:
 
 ## Changing Transformation Algorithm
 
+As we learned, ground control points (GCPs) are defined locations where known features are matched with already-georeferenced data (like a basemap.)
+
+From there, the warping of the image is done via an algorithm to extrapolate the GCPs to the entire image.
+
+There are numerous transformation algorithms and we may see different results depending on the algorithm we use. Some will introduce more distortion to the image, making it appear stretched and distroted. This is commonly called "rubber sheeting". 
+
 ![Image](images/transform.gif)
 
 ## XYZ Tiles in GIS
 
+Allmaps hosts a free XYZ tile server so you can quickly use your Allmaps-georeferenced maps in GIS.
+A word of warning, the Allmaps tile server is not a long term hosting solution.
+
+In the free and open source QGIS, you can use the `Add XYZ Layer` tool to add your map to your project.
+
+![Images](images/QGIS1.png)
+
+From the Allmaps Editor share tools, grab the XYZ Tile URL.
+
+![Image](images/ShareXYZ.png)
+
+Then add a new XYZ Connection in QGIS, pasting the URL into the tool. Usually no other changes are necessary.
+
+![Image](images/QGIS2.png)
+
+Now you can use your georeferenced map right in Desktop GIS!
+
+![Image](images/QGIS3.png)
+
 ## More you can do
+
