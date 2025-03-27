@@ -9,11 +9,14 @@
   </head>
   <body>
     <header class="site-header">
-      <img src="{{ 'images/UWM Primary Logomark_Full Color on Light.svg' | relative_url }}" alt="University of Wisconsin–Milwaukee logo" class="uwm-logo">
-      <h1>{{ site.title }}</h1>
-      <p class="tagline">{{ site.description }}</p>
-    </header>
-
+        <div class="header-inner">
+          <img src="{{ 'images/UWM Primary Logomark_Full Color on Light.svg' | relative_url }}" alt="University of Wisconsin–Milwaukee logo" class="uwm-logo">
+          <div class="header-text">
+            <h1>{{ site.title }}</h1>
+            <p class="tagline">{{ site.description }}</p>
+          </div>
+        </div>
+      </header>
     <main class="content">
       {{ content }}
     </main>
