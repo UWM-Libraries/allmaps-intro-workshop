@@ -54,9 +54,10 @@ Furthermore, adding too many points can actually create undesirable distortions 
 As you georeference your map, check your progress along the way 
 (for example, maybe at 5 GCPs and again at 10 GCPs)
 
-(From https://cartinal.leventhalmap.org/guides/georeferencing-with-allmaps.html#best-practices-for-creating-gcps)
+([Source](https://cartinal.leventhalmap.org/guides/georeferencing-with-allmaps.html#best-practices-for-creating-gcps))
 
-Things change! While georeferencing some maps that we will see in a later example, I found that perhaps using Brown Deer Road wasn't the best option:
+Remember that things change! Roads are repositioned, water levels rise and fall, buildings are built and demolished. 
+While georeferencing some maps that we will see in a later example, I found that perhaps using Brown Deer Road isn't the best option:
 
 ![Image](images/MultiPage_BrownDeer.png)
 
