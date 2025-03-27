@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Georeferencing in Allmaps
 
 In this lesson, we will actually get some hands-on experince georeferencing in Allmaps.

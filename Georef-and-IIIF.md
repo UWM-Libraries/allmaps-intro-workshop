@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Georeferencing and IIIF
 
 ## [here.allmaps.org](here.allmaps.org)

@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Doing more with Allmaps
 
 ## Allmaps Viewer

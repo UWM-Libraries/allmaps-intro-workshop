@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Georeferencing Maps with Allmaps
 
 This is an introductory workshop focused on georeferencing
