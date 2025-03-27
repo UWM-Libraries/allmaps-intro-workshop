@@ -1,32 +1,22 @@
-/* === UWM Color Overrides for Cayman Theme === */
+.page-header {
+  background-color: #ffbd00 !important;
+  color: #000 !important;
+  border-bottom: 4px solid #000;
+}
+
+.project-name,
+.project-tagline {
+  color: #000 !important;
+}
 
 body {
-  background-color: #FEF2DA; /* Cream background */
-  color: #000000; /* Panther Black text */
+  background-color: #FEF2DA;
+  color: #000;
 }
 
-/* Header bar */
-.page-header {
-  background-color: #ffbd00 !important; /* UWM Gold */
-  color: #000000 !important;
-  border-bottom: 4px solid #000000;
-}
-
-/* Title text */
-.project-name {
-  color: #000000 !important;
-}
-
-/* Subtitle/tagline */
-.project-tagline {
-  color: #14364D !important; /* UWM Blue */
-}
-
-/* Links */
 a {
   color: #14364D;
 }
-
 a:hover {
   color: #035056;
 }

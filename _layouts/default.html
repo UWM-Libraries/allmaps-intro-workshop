@@ -2,11 +2,20 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>{{ page.title | default: site.title }}</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+
+    <title>{{ page.title | default: site.title }}</title>
+    <meta name="description" content="{{ site.description }}">
+
+    <!-- Load Cayman theme styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/pages-themes/cayman@v0.2.0/assets/css/style.css">
+    
+    <!-- Your custom UWM branding -->
     <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
   </head>
+
   <body>
     <header class="page-header">
       <h1 class="project-name">{{ site.title }}</h1>
