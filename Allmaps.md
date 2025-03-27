@@ -1,8 +1,7 @@
 ---
+title: Georeferencing in Allmaps
 layout: default
 ---
-
-<link rel="stylesheet" href="assets/css/custom.css">
 
 <div style="display: flex; justify-content: center; gap: 1em; flex-wrap: wrap; margin: 1.5em 0;">
   <a href="index.html" class="button">Back to Home</a>
@@ -116,5 +115,3 @@ We will be working in Allmaps Viewer for the next portion, so try visiting the "
 [MIT License](https://github.com/UWM-Libraries/allmaps-intro-workshop/blob/main/LICENSE)
 
 Copyright (c) 2025 UWM Libraries
-
-<link rel="stylesheet" href="assets/css/custom.css">
