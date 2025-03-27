@@ -72,5 +72,25 @@ Now you can use your georeferenced map right in Desktop GIS!
 
 ![Image](images/QGIS3.png)
 
+From here, you can even use the Export tool to save the dataset as a GeoTIFF, the most popular format for working with Georeferenced images in Desktop GIS.
+
 ## More you can do
+
+What will you do with maps georeferenced in Allmaps?
+
+Here's just a few examples of some of the cool things that have been done!
+
+- [Stories from urban atlases of Waltham](https://www.leventhalmap.org/articles/waltham-urban-atlas-essays/)
+- [Atlascope](https://www.atlascope.org/)
+- [Architectural Drawings](https://viewer.allmaps.org/?url=https%3A%2F%2Fsammeltassen.nl%2Fiiif-manifests%2Fallmaps%2Frivierahal-blijdorp.json)
+- [Aerial Photographs](https://viewer.allmaps.org/?url=https%3A%2F%2Fannotations.allmaps.org%2Fimages%2F4bcc9463d2a68df4)
+
+Another place to learn more about Allmaps is the collection of [Allmaps Observable Notebooks](https://observablehq.com/@allmaps).
+Here you will find out how to do things like...
+
+- Use IIIF maps in MapLibre, Leaflet, or OpenLayers
+- Draw vector GeoJSON layers on top of Allmaps
+- Georeference based on toponyms (placenames)
+- Learn more about the code behind Allmaps and more!
+
 

@@ -21,14 +21,6 @@ Slides: https://docs.google.com/presentation/d/1qj4-PgqcD75TWNOfdI7p1z0MwR4FIfLl
 - [Using Allmaps to Georeference Maps](/Allmaps.md)
 - [Viewing and Using Maps Georeferenced in Allmaps](/Viewer.md)
 
-## Examples
-
-- [Stories from urban atlases of Waltham](https://www.leventhalmap.org/articles/waltham-urban-atlas-essays/)
-- [Atlascope](https://www.atlascope.org/)
-- [Architectural Drawings](https://viewer.allmaps.org/?url=https%3A%2F%2Fsammeltassen.nl%2Fiiif-manifests%2Fallmaps%2Frivierahal-blijdorp.json)
-- [Aerial Photographs](https://viewer.allmaps.org/?url=https%3A%2F%2Fannotations.allmaps.org%2Fimages%2F4bcc9463d2a68df4)
-
-
 ## Resources
 
 * [Allmaps Documentation Site](https://allmaps.org/docs/introduction)
