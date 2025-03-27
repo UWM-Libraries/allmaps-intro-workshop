@@ -4,8 +4,8 @@ layout: default
 
 <link rel="stylesheet" href="assets/css/custom.css">
 
-<a href="/index.md" class="button">Back to Home</a>
-<a href="/Allmaps.md" class="button">Next Lesson: Georeferencing in Allmaps</a>
+<a href="index.html" class="button">Back to Home</a>
+<a href="Allmaps.html" class="button">Next Lesson: Georeferencing in Allmaps</a>
 
 # Lesson 1: Georeferencing and IIIF
 
