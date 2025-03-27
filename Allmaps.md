@@ -1,6 +1,6 @@
 ---
-title: Georeferencing in Allmaps
 layout: default
+title: Georeferencing in Allmaps
 ---
 
 <div style="display: flex; justify-content: center; gap: 1em; flex-wrap: wrap; margin: 1.5em 0;">

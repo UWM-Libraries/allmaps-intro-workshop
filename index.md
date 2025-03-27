@@ -1,6 +1,6 @@
 ---
-title: Allmaps Workshop
 layout: default
+title: Allmaps Workshop
 ---
 
 # Georeferencing Maps with Allmaps

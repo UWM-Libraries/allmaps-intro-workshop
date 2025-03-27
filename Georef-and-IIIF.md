@@ -1,6 +1,6 @@
 ---
-title: Georeferencingt and IIIF
 layout: default
+title: Georeferencingt and IIIF
 ---
 
 <div style="display: flex; justify-content: center; gap: 1em; flex-wrap: wrap; margin: 1.5em 0;">

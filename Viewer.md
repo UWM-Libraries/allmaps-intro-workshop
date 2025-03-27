@@ -1,6 +1,6 @@
 ---
-title: Doing more with Allmaps
 layout: default
+title: Doing more with Allmaps
 ---
 
 <div style="display: flex; justify-content: center; gap: 1em; flex-wrap: wrap; margin: 1.5em 0;">

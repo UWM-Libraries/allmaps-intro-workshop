@@ -1,5 +1,6 @@
 title: Introduction to Allmaps Workshop
-description: Introductory materials for using Allmaps
+description: UWM Libraries – Intro to Georeferencing with Allmaps
 theme: jekyll-theme-cayman
+markdown: kramdown
 github:
   is_project_page: false
