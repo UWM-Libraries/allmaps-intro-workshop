@@ -29,7 +29,7 @@ body {
 
 .header-inner {
   display: flex;
-  align-items: center;
+  align-items: left;
   justify-content: flex-start;
   gap: 1.5rem;
   max-width: 1200px;
