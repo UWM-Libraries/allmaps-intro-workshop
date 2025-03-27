@@ -1,45 +1,45 @@
-/* === UWM Brand Overrides for Cayman Theme === */
+/* === UWM Color Overrides for Cayman Theme === */
+
+body {
+  background-color: #FEF2DA; /* Cream background */
+  color: #000000; /* Panther Black text */
+}
 
 /* Header bar */
 .page-header {
-  background-color: #ffbd00; /* UWM Gold */
-  color: #000000; /* Panther Black text */
+  background-color: #ffbd00 !important; /* UWM Gold */
+  color: #000000 !important;
   border-bottom: 4px solid #000000;
 }
 
-/* Site title in header */
+/* Title text */
 .project-name {
-  color: #000000;
+  color: #000000 !important;
 }
 
-/* Description text in header */
+/* Subtitle/tagline */
 .project-tagline {
-  color: #14364D; /* UWM Blue for contrast/accent */
-}
-
-/* Body text and headers */
-body {
-  color: #000000;
-  background-color: #FEF2DA; /* UWM Cream background */
+  color: #14364D !important; /* UWM Blue */
 }
 
 /* Links */
 a {
-  color: #14364D; /* UWM Blue */
+  color: #14364D;
 }
 
 a:hover {
-  color: #035056; /* UWM Teal */
+  color: #035056;
 }
 
 /* Buttons */
 .button, .btn {
   background-color: #ffbd00;
   color: #000000;
-  border: none;
   padding: 0.6em 1.2em;
   border-radius: 6px;
   font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
@@ -50,6 +50,6 @@ a:hover {
 
 /* Code blocks (optional) */
 pre, code {
-  background-color: #fff; /* white background for readability */
+  background-color: #fff;
   color: #14364D;
 }

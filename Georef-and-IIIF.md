@@ -90,3 +90,5 @@ Other websites may require a bit more sluthing to find the URL. On the David Rum
 [MIT License](https://github.com/UWM-Libraries/allmaps-intro-workshop/blob/main/LICENSE)
 
 Copyright (c) 2025 UWM Libraries
+
+<link rel="stylesheet" href="assets/css/custom.css">

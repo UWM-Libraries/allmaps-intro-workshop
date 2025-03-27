@@ -37,3 +37,5 @@ Slides: https://docs.google.com/presentation/d/1qj4-PgqcD75TWNOfdI7p1z0MwR4FIfLl
 [MIT License](/LICENSE)
 
 Copyright (c) 2025 UWM Libraries
+
+<link rel="stylesheet" href="assets/css/custom.css">
