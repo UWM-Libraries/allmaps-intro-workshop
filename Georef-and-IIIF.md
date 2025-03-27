@@ -84,10 +84,3 @@ Other websites may require a bit more sluthing to find the URL. On the David Rum
     <a href="index.html" class="button">Back to Home</a>
     <a href="Allmaps.html" class="button">Next Lesson: Georeferencing in Allmaps</a>
 </div>
-
-
-## License
-
-[MIT License](https://github.com/UWM-Libraries/allmaps-intro-workshop/blob/main/LICENSE)
-
-Copyright (c) 2025 UWM Libraries

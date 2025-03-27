@@ -33,8 +33,3 @@ Slides: https://docs.google.com/presentation/d/1qj4-PgqcD75TWNOfdI7p1z0MwR4FIfLl
 * [Allmaps Documentation Site](https://allmaps.org/docs/introduction)
 * [AGSL Digtial Map Collection](https://uwm.edu/lib-collections/agsl-digital-map-collection/)
 
-## License
-
-[MIT License](/LICENSE)
-
-Copyright (c) 2025 UWM Libraries

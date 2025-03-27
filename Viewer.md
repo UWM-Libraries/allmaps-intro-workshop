@@ -117,9 +117,3 @@ Here you will find out how to do things like...
     <a href="index.html" class="button">Back to Home</a>
     <a href="Allmaps.html" class="button">Previous Lesson: Georeferencing in Allmaps</a>
 </div>
-
-## License
-
-[MIT License](https://github.com/UWM-Libraries/allmaps-intro-workshop/blob/main/LICENSE)
-
-Copyright (c) 2025 UWM Libraries

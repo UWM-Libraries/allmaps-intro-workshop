@@ -1,24 +1,70 @@
-/* --- Layout Enhancements --- */
+/* === UWM Workshop Branding === */
 
+/* Global Styles */
+body {
+  background-color: #FEF2DA;  /* UWM Cream */
+  color: #000;                /* Panther Black */
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Header Styles */
 .site-header {
-  background-color: #ffbd00 !important; /* UWM Gold */
-  color: #000 !important;
-  padding: 1.5rem 2rem;
-  text-align: center;
+  background-color: #ffbd00;  /* UWM Gold */
   border-bottom: 4px solid #000;
+  text-align: center;
+  padding: 1.5rem 2rem;
 }
 
 .site-header h1 {
   margin: 0;
   font-size: 2rem;
+  color: #000;
 }
 
 .site-header .tagline {
-  margin: 0.25rem 0 0;
+  margin-top: 0.5rem;
   font-size: 1.1rem;
-  color: #14364D; /* Optional secondary tone */
+  color: #14364D;  /* UWM Blue accent */
 }
 
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: #000;
+}
+
+/* Links */
+a {
+  color: #0000EE;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #551A8B;
+}
+
+/* Buttons */
+.button {
+  background-color: #ffbd00;
+  color: #000;
+  padding: 0.6em 1.2em;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  margin: 0.5rem 0.25rem;
+}
+
+.button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Footer */
 .site-footer {
   margin-top: 3rem;
   padding: 1.5rem 2rem;

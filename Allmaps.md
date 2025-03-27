@@ -111,9 +111,3 @@ We will be working in Allmaps Viewer for the next portion, so try visiting the "
   <a href="Georef-and-IIIF.html" class="button">Previous Lesson: Georeferencing in Allmaps</a>
   <a href="Viewer.html" class="button">Next Lesson: Doing More with Allmaps</a>
 </div>
-
-## License
-
-[MIT License](https://github.com/UWM-Libraries/allmaps-intro-workshop/blob/main/LICENSE)
-
-Copyright (c) 2025 UWM Libraries
