@@ -2,5 +2,7 @@ title: Introduction to Allmaps Workshop
 description: UWM Libraries – Intro to Georeferencing with Allmaps
 theme: jekyll-theme-cayman
 markdown: kramdown
-github:
-  is_project_page: false
+
+# Use a custom head include
+include:
+  - _includes/head-custom.html
