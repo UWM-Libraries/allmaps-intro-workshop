@@ -2,6 +2,8 @@
 layout: default
 ---
 
+<link rel="stylesheet" href="assets/css/style.css">
+
 # Georeferencing and IIIF
 
 ## [here.allmaps.org](here.allmaps.org)
