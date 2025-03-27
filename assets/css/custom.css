@@ -30,9 +30,10 @@ body {
 .header-inner {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 1.5rem;
-  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .uwm-logo {
@@ -127,7 +128,6 @@ img {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Mobile adjustments */
 @media (max-width: 600px) {
   .header-inner {
     flex-direction: column;
