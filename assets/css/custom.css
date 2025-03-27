@@ -1,29 +1,27 @@
-/* UWM Brand Theme Overrides for Cayman */
-
-.page-header {
-  background-color: #ffbd00;
-  color: #000;
-  border-bottom: 4px solid #000;
-}
-
-.project-name,
-.project-tagline {
-  color: #000;
-}
-
 body {
-  background-color: #FEF2DA;
+  background-color: #FEF2DA; /* UWM Cream */
+  color: #000;
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+h1, h2, h3 {
   color: #000;
 }
 
 a {
-  color: #14364D;
-}
-a:hover {
-  color: #035056;
+  color: #0000EE;
+  text-decoration: underline;
 }
 
-.button, .btn {
+a:hover {
+  color: #551A8B;
+}
+
+.button {
   background-color: #ffbd00;
   color: #000;
   padding: 0.6em 1.2em;
@@ -34,7 +32,7 @@ a:hover {
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.button:hover, .btn:hover {
+.button:hover {
   background-color: #000;
   color: #fff;
 }
