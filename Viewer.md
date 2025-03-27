@@ -2,7 +2,13 @@
 layout: default
 ---
 
-# Doing more with Allmaps
+<link rel="stylesheet" href="assets/css/custom.css">
+
+<a href="index.md" class="button">Back to Home</a>
+<a href="Allmaps.md" class="button">Previous Lesson: Georeferencing in Allmaps</a>
+
+
+# Lesson 3: Doing more with Allmaps
 
 ## Allmaps Viewer
 
@@ -103,4 +109,11 @@ Here you will find out how to do things like...
 - Georeference based on toponyms (placenames)
 - Learn more about the code behind Allmaps and more!
 
-[Back to homepage](/index.md) | [Previous Lesson: Georeferencing in Allmaps](/Allmaps.md)
+<a href="index.md" class="button">Back to Home</a>
+<a href="Allmaps.md" class="button">Previous Lesson: Georeferencing in Allmaps</a>
+
+## License
+
+[MIT License](/LICENSE)
+
+Copyright (c) 2025 UWM Libraries

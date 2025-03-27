@@ -2,7 +2,13 @@
 layout: default
 ---
 
-# Georeferencing in Allmaps
+<link rel="stylesheet" href="assets/css/custom.css">
+
+<a href="index.md" class="button">Back to Home</a>
+<a href="Georef-and-IIIF.md" class="button">Previous Lesson: Georeferencing in Allmaps</a>
+<a href="Viewer.md" class="button">Next Lesson: Doing More with Allmaps</a>
+
+# Lesson 2: Georeferencing in Allmaps
 
 In this lesson, we will actually get some hands-on experince georeferencing in Allmaps.
 
@@ -95,4 +101,14 @@ The share button will give us some links for viewing the map in Allmaps Viewer, 
 
 We will be working in Allmaps Viewer for the next portion, so try visiting the "View in Allmaps Viewer" link in the share menu.
 
+<a href="index.md" class="button">Back to Home</a>
+<a href="Georef-and-IIIF.md" class="button">Previous Lesson: Georeferencing in Allmaps</a>
+<a href="Viewer.md" class="button">Next Lesson: Doing More with Allmaps</a>
+
 [Back to homepage](/index.md) | [Previous Lesson: Georeferencing and IIIF](/Allmaps.md) | [Next Lesson: Doing more with Allmaps](/Viewer.md)
+
+## License
+
+[MIT License](/LICENSE)
+
+Copyright (c) 2025 UWM Libraries

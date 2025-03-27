@@ -4,7 +4,10 @@ layout: default
 
 <link rel="stylesheet" href="assets/css/custom.css">
 
-# Georeferencing and IIIF
+<a href="index.md" class="button">Back to Home</a>
+<a href="Allmaps.md" class="button">Next Lesson: Georeferencing in Allmaps</a>
+
+# Lesson 1: Georeferencing and IIIF
 
 ## [here.allmaps.org](here.allmaps.org)
 
@@ -74,3 +77,9 @@ Other websites may require a bit more sluthing to find the URL. On the David Rum
 
 <a href="index.md" class="button">Back to Home</a>
 <a href="Allmaps.md" class="button">Next Lesson: Georeferencing in Allmaps</a>
+
+## License
+
+[MIT License](/LICENSE)
+
+Copyright (c) 2025 UWM Libraries

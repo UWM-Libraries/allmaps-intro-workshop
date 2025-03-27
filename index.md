@@ -2,6 +2,8 @@
 layout: default
 ---
 
+<link rel="stylesheet" href="assets/css/custom.css">
+
 # Georeferencing Maps with Allmaps
 
 This is an introductory workshop focused on georeferencing
@@ -21,11 +23,17 @@ Slides: https://docs.google.com/presentation/d/1qj4-PgqcD75TWNOfdI7p1z0MwR4FIfLl
 
 ## Lessons
 
-- [Georeferencing and IIIF](/Georef-and-IIIF.md)
-- [Using Allmaps to Georeference Maps](/Allmaps.md)
-- [Viewing and Using Maps Georeferenced in Allmaps](/Viewer.md)
+- [Lesson 1: Georeferencing and IIIF](/Georef-and-IIIF.md)
+- [Lesson 2: Using Allmaps to Georeference Maps](/Allmaps.md)
+- [Lesson 3: Viewing and Using Maps Georeferenced in Allmaps](/Viewer.md)
 
 ## Resources
 
 * [Allmaps Documentation Site](https://allmaps.org/docs/introduction)
 * [AGSL Digtial Map Collection](https://uwm.edu/lib-collections/agsl-digital-map-collection/)
+
+## License
+
+[MIT License](/LICENSE)
+
+Copyright (c) 2025 UWM Libraries
