@@ -10,7 +10,7 @@ title: Allmaps Workshop
 This is an introductory workshop focused on georeferencing
 maps with the [Allmaps](allmaps.org) platform.
 
-Slides: https://docs.google.com/presentation/d/1qj4-PgqcD75TWNOfdI7p1z0MwR4FIfLl2IU9dMy-lp8/edit?usp=sharing
+Slides: [https://docs.google.com/presentation/d/1qj4-PgqcD75TWNOfdI7p1z0MwR4FIfLl2IU9dMy-lp8/edit?usp=sharing](https://docs.google.com/presentation/d/1qj4-PgqcD75TWNOfdI7p1z0MwR4FIfLl2IU9dMy-lp8/edit?usp=sharing)
 
 ## Learning Goals
 
