@@ -10,6 +10,8 @@ title: Georeferencingt and IIIF
     <a href="Allmaps.html" class="button">Next Lesson: Georeferencing in Allmaps</a>
 </div>
 
+* * *
+
 # Lesson 1: Georeferencing and IIIF
 
 ## [here.allmaps.org](https://here.allmaps.org)
@@ -50,6 +52,8 @@ We used georeferenced Sanborn Fire Insurance Maps to make our
 [Sanborn Web Map](https://webgis.uwm.edu/agsl/sanborn/).
 A similar project by our partners at Leventhal Map & Education Center at Boston Public Library (co-awardees of a NEH Digital Advancement Grant) used Allmaps
 to georeference urban atlas sheets for their fantastic [Atlascope application](https://www.atlascope.org/).
+
+![Image](images/Atlascope.png)
 
 Traditionally, georeferencing has been done with GIS--Geographic Information Systems.
 With the proliferation of accessible and easy-to-use web mapping and GIS technology, 
