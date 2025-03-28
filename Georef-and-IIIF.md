@@ -35,15 +35,21 @@ While anyone is welcome to flip through the nearly 300 photographs that make up 
 seeing them overlaid over modern satellite imagery adds additional context and the ability to make comparison over time.
 
 Georeferencing scanned maps enables some useful analysis methods:
-One can extract information from a map, such as locations of topographic features like villages, mountains, rivers, or roads.
-Overlaid on top of one-another, two maps can be directly compared or verified.
-And for large sets of maps that use many sheets to cover a geographic area, georeferencing can help create a *mosaic* for viewing
+- One can extract information from a map, such as locations of topographic features like villages, mountains, rivers, or roads.
+- Overlaid on top of one-another, two maps can be directly compared or verified.
+- And for large sets of maps that use many sheets to cover a geographic area, georeferencing can help create a *mosaic* for viewing
 multiple sheets at once.
 
 The example below shows the South Carolina state line being overlaid on a historic map in GIS, a basic yet useful function made possible by georeferencing.
 
 ![image](images/georef_bok.png)
 *The georeferencing process to place a digital image into a GIS* ([Source for image and caption.](https://gistbok-ltb.ucgis.org/page/27/concept/8131))
+
+For objects with multiple sheets or pages, such as atlases of urban areas, georeferencing can make the experience easier and more fun.
+We used georeferenced Sanborn Fire Insurance Maps to make our
+[Sanborn Web Map](https://webgis.uwm.edu/agsl/sanborn/).
+A similar project by our partners at Leventhal Map & Education Center at Boston Public Library (co-awardees of a NEH Digital Advancement Grant) used Allmaps
+to georeference urban atlas sheets for their fantastic [Atlascope application](https://www.atlascope.org/).
 
 Traditionally, georeferencing has been done with GIS--Geographic Information Systems.
 With the proliferation of accessible and easy-to-use web mapping and GIS technology, 
@@ -54,11 +60,21 @@ For much more information, I recommend [*Georeferencing and Georectification*](h
 
 ## What is IIIF?
 
-IIIF (pronounced “triple-eye-eff”), or the [International Image Interoperability Framework](https://iiif.io/), 
-is a set of open standards for delivering high-quality, attributed digital objects online at scale. 
-IIIF is a way to standardize the delivery of images and audio/visual files from servers to different 
-environments on the Web where they can then be viewed and interacted with in many ways.
-([source](https://iiif.io/get-started/how-iiif-works/)) 
+IIIF (pronounced “triple-eye-eff”), or the [International Image Interoperability Framework](https://iiif.io/),  
+is a set of open standards for delivering high-quality, attributed digital objects online at scale.  
+
+IIIF provides a consistent way for institutions to share digital images, maps, manuscripts, artworks, and even audio/visual files across different platforms. Rather than locking media inside specific viewers or software tools, IIIF offers a **standardized, flexible way** to deliver these resources to any compatible application.
+
+This means that:
+
+- A digitized map from one library can be viewed side-by-side with one from another institution.
+- A scholar can annotate or compare high-resolution images without downloading huge files.
+- Tools like [Allmaps](https://allmaps.org/), [Mirador](https://projectmirador.org/), and [Universal Viewer](https://universalviewer.io/) can all read the same IIIF content.
+
+At its core, IIIF allows for **interoperability** — making it easier for cultural heritage institutions, educators, and developers to **build rich user experiences around media** from all over the world.
+
+Learn more about how it works at [iiif.io](https://iiif.io/get-started/how-iiif-works/).  
+([source](https://iiif.io/get-started/how-iiif-works/))
 
 
 ### Finding IIIF maps to use in Allmaps
