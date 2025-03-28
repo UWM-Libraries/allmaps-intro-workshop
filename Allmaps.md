@@ -11,6 +11,8 @@ title: Georeferencing in Allmaps
   <a href="Viewer.html" class="button">Next Lesson: Doing More with Allmaps</a>
 </div>
 
+* * *
+
 # Lesson 2: Georeferencing in Allmaps
 
 In this lesson, we will actually get some hands-on experince georeferencing in Allmaps.
@@ -81,24 +83,23 @@ Behind the scenes, creating ground control points in Allmaps is creating a [Geor
 ![Image](images/georef_nz2_2.png)
 
 It creates paired values of resource coordinates and geometry coordinates. The Resource Coordinates reprsent pixels in the image (e.g. 3017 across, 4367 down) and the Geometry coordinates are longitude and latitude coordinates (e.g. 172.936215°E, 43.7589394°S).
+(6 digit coordinate precision is probably too much; I look for any excuse to share this [XKCD Comic on Coordinate Precision](https://xkcd.com/2170))
 
-Allmaps uses this annotation information to calculate how to display (including any warping and stretching) necessary to overlay the iamge on the map.
+Allmaps uses this annotation information to calculate how to display (including any warping and stretching) necessary to overlay the image on the map.
 
 ## Results
 
-The results tab will show you a quick preview of the map you've been working on. This is a great way to check that you're in the right ballpark! Not all the features of Allmaps Viewers are available in the Results view, we will look at these functionalities in the next lesson.
+The results tab will show you a quick preview of the map you've been working on. This is a great way to check that you're in the right ballpark!
+Not all the features of Allmaps Viewers are available in the Results view, we will look at these functionalities in the next lesson.
 
 ![Image](images/georef_nz5_result.png)
 
 On the bottom right, you will see a drawer with a few more tools:
 
-The information button will open up a drawer with information about the IIIF resource that you're working on.
-
-The GCP list will show you each of the resource-coordinate pairs you created. This is where you can delete GCPs if you are unhappy with them or feel like they aren't improving your georeference.
-
-The code button will show you the actual JSON text of the Georeference Annotation as it's being created. You could actually copy and save this whole annotation and view it in allmaps viewer. It will be protected from anyone else making modifications this way!
-
-The share button will give us some links for viewing the map in Allmaps Viewer, sharing the georeference annotation, sharing a GeoJSON representation of the georeferenced map, and finally the XYZ map tile link to use the map in an external webmap or even in GIS software.
+- The information button will open up a drawer with information about the IIIF resource that you're working on.
+- The GCP list will show you each of the resource-coordinate pairs you created. This is where you can delete GCPs if you are unhappy with them or feel like they aren't improving your georeference.
+- The code button will show you the actual JSON text of the Georeference Annotation as it's being created. You could actually copy and save this whole annotation and view it in allmaps viewer. It will be protected from anyone else making modifications this way!
+- The share button will give us some links for viewing the map in Allmaps Viewer, sharing the georeference annotation, sharing a GeoJSON representation of the georeferenced map, and finally the XYZ map tile link to use the map in an external webmap or even in GIS software.
 
 ![image](images/georef_nz6_Share.png)
 
