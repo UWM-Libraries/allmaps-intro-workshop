@@ -10,109 +10,105 @@ title: Doing more with Allmaps
     <a href="Allmaps.html" class="button">Previous Lesson: Georeferencing in Allmaps</a>
 </div>
 
-* * * 
+* * *
 
 # Lesson 3: Doing more with Allmaps
 
 ## Allmaps Viewer
 
-[Allmaps Viewer](https://viewer.allmaps.org) is used for viewing georeferenced maps in Allmaps. Similar to the results tab of editor, you can view the map overlaid on a web map.
-Viewer has a vew more tools that you can use to change the appearance and functionality of the map.
+[Allmaps Viewer](https://viewer.allmaps.org) is used to view georeferenced maps in Allmaps. Similar to the **Results** tab in the Editor, you can see the map overlaid on a web map.
+The Viewer also includes **additional tools** that let you customize the appearance and functionality of your map.
 
-The most common tools are on the bottom of the page and look like small dials.
-They control layer transparency/opacity and background removal.
+Common tools (found at the bottom of the screen) include sliders that control **layer transparency/opacity** and **background removal**.
 
-Background Removal is particularly useful with historical maps because it allows us to overlay the map data while not showing the blank space on the paper.
+Background removal is especially useful with historical maps—it removes the blank paper and allows the cartographic information to shine.
 
-![Image](images/georef_nz8_Background.png)
+![Background removal comparison in Allmaps Viewer](images/georef_nz8_Background.png)
 
-Other functionalities and keyboard shortcuts include:
+Keyboard shortcuts:
 
-- Toggle transparency on and off with <kbd>Space</kbd>
-- Toggle background removal with <kbd>B</kbd>
-- Display the mask with <kbd>M</kbd>
-- Change the transformation algorithm with <kbd>T</kbd>
-- Display a grid over the image with <kbd>G</kbd>
-- Use <kbd>D</kbd> to cycle display of distortions: surface deformation, angle distortion, or no distortion
+- <kbd>Space</kbd> – Toggle transparency on/off
+- <kbd>B</kbd> – Toggle background removal
+- <kbd>M</kbd> – Display the mask
+- <kbd>T</kbd> – Change the transformation algorithm
+- <kbd>G</kbd> – Display a grid over the image
+- <kbd>D</kbd> – Cycle display of distortions: surface deformation, angle distortion, or none
 
+## Viewing Stitched Atlas Sheets
 
-## Viewing stitched atlas sheets
+Take this example from the [Milwaukee County land use and zoning atlas](https://collections.lib.uwm.edu/digital/collection/agdm/id/36112).
 
-I've been working on this [Milwaukee County land use and zoning atlas](https://collections.lib.uwm.edu/digital/collection/agdm/id/36112). 
+IIIF Manifest: `https://collections.lib.uwm.edu/iiif/info/agdm/36112/manifest.json`
 
-The IIIF manifest is: `https://collections.lib.uwm.edu/iiif/info/agdm/36112/manifest.json`
+Green symbols indicate sheets that are already georeferenced:
 
-You can see if a map in a set has already been georeferenced by looking for the green symbol:
+![Green indicator for georeferenced pages](images/MultiPageGreen.png)
 
-![Image](images/MultiPageGreen.png)
+Yellow warning symbols indicate maps with masks but no georeferencing yet:
 
-And if someone has already created a mask but hasn't started Georeferencing, it will show a yellow warning:
+![Yellow warning symbol for masked-only pages](images/MultiPageYellow.png)
 
-![Image](images/MultiPageYellow.png)
+[View this atlas in Allmaps Viewer](https://viewer.allmaps.org/?url=https%3A%2F%2Fcollections.lib.uwm.edu%2Fiiif%2Finfo%2Fagdm%2F36112%2Fmanifest.json) to see how stitched maps are displayed. As more sheets are georeferenced, they’ll appear in the viewer.
 
-[Viewing the manifest in Allmaps Viewer](https://viewer.allmaps.org/?url=https%3A%2F%2Fcollections.lib.uwm.edu%2Fiiif%2Finfo%2Fagdm%2F36112%2Fmanifest.json), you can see the pages stitched together. As we continue to work through this atlas, additional sheets will be visible.
+![Example of stitched atlas sheets in Allmaps Viewer](images/MultiPageStitch.png)
 
-![Image](images/MultiPageStitch.png)
+When working with multi-sheet objects:
 
-For objects with multiple maps:
+- <kbd>[</kbd> and <kbd>]</kbd> – Cycle through maps
+- <kbd>Right Click</kbd> – Change map layer order
 
-- <kbd>[</kbd> and <kbd>]</kbd> keys cycle through the different maps  
-- <kbd>Right Click</kbd> on a map to adjust the order of the map layers
+## Changing the Transformation Algorithm
 
-## Changing Transformation Algorithm
+As we covered in Lesson 2, ground control points (GCPs) define locations where features match across old and new maps. A transformation algorithm uses these points to warp the image accordingly.
 
-As we learned in Lesson 2, ground control points (GCPs) are defined locations where known features are matched with already-georeferenced data (like a basemap.)
-From there, the warping of the image is done via an algorithm to extrapolate the GCPs to the entire image.
+Cycle through algorithms using <kbd>T</kbd>.
 
-You cycle through the transformation algorithms with <kbd>T</kbd>.
+Different algorithms will produce different results. Some stretch or distort the image more than others—this is known as **rubber sheeting**.
 
-There are numerous transformation algorithms and we may see different results depending on the algorithm we use. Some will introduce more distortion to the image, making it appear stretched and distroted. This is commonly called "rubber sheeting". 
+![Comparison of different transformation algorithms](images/transform.gif)
 
-![Image](images/transform.gif)
+## Using XYZ Tiles in GIS
 
-## XYZ Tiles in GIS
+Allmaps provides a free **XYZ tile server**, allowing you to bring georeferenced maps directly into GIS software like QGIS.
+Note: this is not intended for permanent hosting.
 
-Allmaps hosts a free XYZ tile server so you can quickly use your Allmaps-georeferenced maps in GIS.
-A word of warning, the Allmaps tile server is not a long term hosting solution.
+In **QGIS**, use the **Add XYZ Layer** tool:
 
-In the free and open source QGIS, you can use the `Add XYZ Layer` tool to add your map to your project.
+![Opening XYZ tile layer dialog in QGIS](images/QGIS1.png)
 
-![Images](images/QGIS1.png)
+Copy the **XYZ Tile URL** from the Allmaps Editor Share tools:
 
-From the Allmaps Editor share tools, grab the XYZ Tile URL.
+![Where to find the tile URL](images/ShareXYZ.png)
 
-![Image](images/ShareXYZ.png)
+Then create a new XYZ Connection in QGIS and paste in the URL. No other changes are usually needed.
 
-Then add a new XYZ Connection in QGIS, pasting the URL into the tool. Usually no other changes are necessary.
+![Adding a new XYZ connection in QGIS](images/QGIS2.png)
 
-![Image](images/QGIS2.png)
+Now you can use your georeferenced map directly in desktop GIS!
 
-Now you can use your georeferenced map right in Desktop GIS!
+![Georeferenced map shown inside QGIS](images/QGIS3.png)
 
-![Image](images/QGIS3.png)
+You can even use the **Export** tool to save the result as a **GeoTIFF**, a standard format for georeferenced images.
 
-From here, you can even use the Export tool to save the dataset as a GeoTIFF, the most popular format for working with Georeferenced images in Desktop GIS.
+More info on the Allmaps Tile Server is available in this [Observable notebook](https://observablehq.com/@allmaps/allmaps-tile-server).
 
-There's an [observable notebook](https://observablehq.com/@allmaps/allmaps-tile-server) with more information bout the Allmaps Tile Server.
+## More You Can Do
 
-## More you can do
+What will *you* do with your georeferenced maps?
 
-What will you do with maps georeferenced in Allmaps?
+Here are just a few exciting examples:
 
-Here's just a few examples of some of the cool things that have been done!
-
-- [Stories from urban atlases of Waltham](https://www.leventhalmap.org/articles/waltham-urban-atlas-essays/)
+- [Stories from Urban Atlases of Waltham](https://www.leventhalmap.org/articles/waltham-urban-atlas-essays/)
 - [Atlascope](https://www.atlascope.org/)
-- [Architectural Drawings](https://viewer.allmaps.org/?url=https%3A%2F%2Fsammeltassen.nl%2Fiiif-manifests%2Fallmaps%2Frivierahal-blijdorp.json)
-- [Aerial Photographs](https://viewer.allmaps.org/?url=https%3A%2F%2Fannotations.allmaps.org%2Fimages%2F4bcc9463d2a68df4)
+- [Architectural Drawings in Allmaps](https://viewer.allmaps.org/?url=https%3A%2F%2Fsammeltassen.nl%2Fiiif-manifests%2Fallmaps%2Frivierahal-blijdorp.json)
+- [Georeferenced Aerial Photographs](https://viewer.allmaps.org/?url=https%3A%2F%2Fannotations.allmaps.org%2Fimages%2F4bcc9463d2a68df4)
 
-Another place to learn more about Allmaps is the collection of [Allmaps Observable Notebooks](https://observablehq.com/@allmaps).
-Here you will find out how to do things like...
+To go even further, explore the collection of [Allmaps Observable Notebooks](https://observablehq.com/@allmaps):
 
 - Use IIIF maps in MapLibre, Leaflet, or OpenLayers
-- Draw vector GeoJSON layers on top of Allmaps
-- Georeference based on toponyms (placenames)
-- Learn more about the code behind Allmaps and more!
+- Draw vector **GeoJSON** layers on top of Allmaps
+- Georeference based on **toponyms** (place names)
+- Learn more about the **code and architecture** of Allmaps
 
 * * *
 
