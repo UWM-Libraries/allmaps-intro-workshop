@@ -7,7 +7,7 @@ title: Georeferencing in Allmaps
 
 <div class="button-group"><a href="index.html" class="button">Back to Home</a></div>
 <div class="button-group">
-  <a href="Georef-and-IIIF.html" class="button">Previous Lesson: Georeferencing in Allmaps</a>
+  <a href="Georef-and-IIIF.html" class="button">Previous Lesson: Georeferencing and IIIF</a>
   <a href="Viewer.html" class="button">Next Lesson: Doing More with Allmaps</a>
 </div>
 
@@ -15,100 +15,94 @@ title: Georeferencing in Allmaps
 
 # Lesson 2: Georeferencing in Allmaps
 
-In this lesson, we will actually get some hands-on experince georeferencing in Allmaps.
+In this lesson, we'll get hands-on experience georeferencing maps in **Allmaps**.
 
 ## Allmaps Editor
 
-If you haven't already, launch the Allmaps editor by going to [editor.allmaps.org](https://editor.allmaps.org).
+If you haven't already, launch the Allmaps Editor by going to [editor.allmaps.org](https://editor.allmaps.org).
 
-You can choose a map by either...
+You can choose a map by either:
 
-1. Enter a IIIF Manifest URL in the text box at the top of the page
-2. Scroll down to find a map in one of the highlighted collections. 
+1. Entering a **IIIF Manifest URL** in the text box at the top of the page
+2. Scrolling down to find a map in one of the highlighted collections
 
-![Image](images/georef_nz1_start.png)
+![Start screen of the Allmaps Editor](images/georef_nz1_start.png)
 
 ## Masking
 
-The first step is adding a clipping mask.
-This involves drawing a line around the "map" areas of the document to exclude the map collar.
-In other words, it's identifying the part of the scanned image that we want to georeference.
+The first step is adding a **clipping mask**. This involves drawing a line around the "map" areas of the document to exclude the collar or marginalia. In other words, you're identifying the part of the scanned image that you want to georeference.
 
-Use the Draw Mask tab to add a mask. Click to add points and double click to end the polygon.
-If you mess up, click cancel to start over.
+Use the **Draw Mask** tab to add a mask. Click to add points, and double-click to close the polygon. If you mess up, click **Cancel** to start over.
 
-![Image](images/georef_nz3_Mask.png)
+![Drawing a mask in Allmaps](images/georef_nz3_Mask.png)
 
-It's possible your map image includes multiple maps! Each map will get it's own mask!
+It's possible your image includes multiple maps! Each map gets its own mask.
 
-![Image](images/greenpoint.jpg) ([img src](https://iiif.io/api/extension/georef/images/greenpoint.jpg))
+![Example of a scanned page with multiple maps](images/greenpoint.jpg)
 
-Much of the time, your mask will be one rectangle just inside the neatline.
+Much of the time, your mask will simply be a rectangle drawn just inside the map's neatline.
 
-![Image](images/georef_nz4_MaskCorner.png)
+![A rectangular mask drawn near the map corners](images/georef_nz4_MaskCorner.png)
 
 ## Ground Control Points
 
-Ground control points (GCPs) guide Allmaps in aligning the scanned map on the left side of the screen with the real-world geography on the right side.
+**Ground Control Points (GCPs)** guide Allmaps in aligning the scanned image (left side) with real-world geography (right side).
 
-We will create GCPs in the Georeference tab.
+Use the **Georeference** tab to begin placing GCPs. To create one, find a location that clearly matches on both sides—such as a street intersection or the corner of a recognizable building. Click the same spot on both images.
 
-To create a GCP, find a location that clearly matches on both sides—like an unchanged street intersection or the corner of a lasting building. Click that same spot on both sides of the editor.
-
-![Image](images/georef_nz2_GCP.png)
+![Adding ground control points in Allmaps](images/georef_nz2_GCP.png)
 
 ### GCP Best Practices for Urban Atlases:
 
-**Avoid water bodies**—they change too much over time to trust for georeferencing
-
-**Roads and buildings are useful**—as long as roads and buildings haven't been torn down or paved over, 
-these are your safest bet for identifying a shared location between past and present
-
-**Check your progress**—sometimes it only takes a few points to successfully georeference a map. 
-Furthermore, adding too many points can actually create undesirable distortions in the warped image. 
-As you georeference your map, check your progress along the way 
-(for example, maybe at 5 GCPs and again at 10 GCPs)
+- **Avoid water bodies** – they change too much over time to be reliable.
+- **Use roads and buildings** – as long as they haven’t been torn down or significantly altered.
+- **Check your progress** – sometimes only a few GCPs are needed. Too many can actually introduce unwanted distortion. A good check-in is after placing 5–10 points.
 
 ([Source](https://cartinal.leventhalmap.org/guides/georeferencing-with-allmaps.html#best-practices-for-creating-gcps))
 
-Remember that things change! Roads are repositioned, water levels rise and fall, buildings are built and demolished. 
-While georeferencing some maps that we will see in a later example, I found that perhaps using Brown Deer Road isn't the best option:
+Remember, landscapes change: roads shift, water levels fluctuate, buildings appear and disappear. For example, using Brown Deer Road may not always be ideal:
 
-![Image](images/MultiPage_BrownDeer.png)
+![Example showing problematic alignment using Brown Deer Road](images/MultiPage_BrownDeer.png)
 
 ### What is this doing?
 
-Behind the scenes, creating ground control points in Allmaps is creating a [Georeference Annotation](https://iiif.io/api/extension/georef/).
+Behind the scenes, placing GCPs in Allmaps creates a [**Georeference Annotation**](https://iiif.io/api/extension/georef/).
 
-![Image](images/georef_nz2_2.png)
+![Diagram of resource vs geometry coordinates](images/georef_nz2_2.png)
 
-It creates paired values of resource coordinates and geometry coordinates. The Resource Coordinates reprsent pixels in the image (e.g. 3017 across, 4367 down) and the Geometry coordinates are longitude and latitude coordinates (e.g. 172.936215°E, 43.7589394°S).
-(6 digit coordinate precision is probably too much; I look for any excuse to share this [XKCD Comic on Coordinate Precision](https://xkcd.com/2170))
+Each point creates a pair of values:
+- **Resource coordinates** – pixel location in the image (e.g. 3017, 4367)
+- **Geometry coordinates** – geographic location in longitude/latitude (e.g. 172.936215°E, 43.7589394°S)
 
-Allmaps uses this annotation information to calculate how to display (including any warping and stretching) necessary to overlay the image on the map.
+Allmaps uses this data to calculate the warping or stretching needed to align the image over the map.
+
+> 6-digit coordinate precision is probably overkill — any excuse to link this [XKCD comic on coordinate precision](https://xkcd.com/2170)!
 
 ## Results
 
-The results tab will show you a quick preview of the map you've been working on. This is a great way to check that you're in the right ballpark!
-Not all the features of Allmaps Viewers are available in the Results view, we will look at these functionalities in the next lesson.
+The **Results** tab gives you a preview of the map with georeferencing applied. It's a great way to check alignment and see if you're on the right track.
 
-![Image](images/georef_nz5_result.png)
+![Preview of results in Allmaps](images/georef_nz5_result.png)
 
-On the bottom right, you will see a drawer with a few more tools:
+In the bottom right, you’ll see a drawer with more tools:
 
-- The information button will open up a drawer with information about the IIIF resource that you're working on.
-- The GCP list will show you each of the resource-coordinate pairs you created. This is where you can delete GCPs if you are unhappy with them or feel like they aren't improving your georeference.
-- The code button will show you the actual JSON text of the Georeference Annotation as it's being created. You could actually copy and save this whole annotation and view it in allmaps viewer. It will be protected from anyone else making modifications this way!
-- The share button will give us some links for viewing the map in Allmaps Viewer, sharing the georeference annotation, sharing a GeoJSON representation of the georeferenced map, and finally the XYZ map tile link to use the map in an external webmap or even in GIS software.
+- **Information** – about the IIIF resource
+- **GCP List** – lists all your points; delete ones that don't work
+- **Code** – shows the actual Georeference Annotation (JSON format). You can copy and reuse this in the Viewer.
+- **Share** – provides:
+  - Link to view in Allmaps Viewer
+  - Link to the annotation
+  - GeoJSON download
+  - XYZ tile link (usable in web maps or GIS software)
 
-![image](images/georef_nz6_Share.png)
+![The share menu in Allmaps](images/georef_nz6_Share.png)
 
-We will be working in Allmaps Viewer for the next portion, so try visiting the "View in Allmaps Viewer" link in the share menu.
+We'll explore the Viewer in the next lesson. For now, click the **View in Allmaps Viewer** link in the share menu to continue.
 
 * * *
 
 <div class="button-group">
-  <a href="Georef-and-IIIF.html" class="button">Previous Lesson: Georeferencing in Allmaps</a>
+  <a href="Georef-and-IIIF.html" class="button">Previous Lesson: Georeferencing and IIIF</a>
   <a href="Viewer.html" class="button">Next Lesson: Doing More with Allmaps</a>
 </div>
 <div class="button-group"><a href="index.html" class="button">Back to Home</a></div>
