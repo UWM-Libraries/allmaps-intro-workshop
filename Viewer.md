@@ -10,6 +10,8 @@ title: Doing more with Allmaps
     <a href="Allmaps.html" class="button">Previous Lesson: Georeferencing in Allmaps</a>
 </div>
 
+* * * 
+
 # Lesson 3: Doing more with Allmaps
 
 ## Allmaps Viewer
@@ -17,7 +19,8 @@ title: Doing more with Allmaps
 [Allmaps Viewer](https://viewer.allmaps.org) is used for viewing georeferenced maps in Allmaps. Similar to the results tab of editor, you can view the map overlaid on a web map.
 Viewer has a vew more tools that you can use to change the appearance and functionality of the map.
 
-The most common tools are on the bottom of the page and look like small dials. They control layer transparency/opacity and background removal.
+The most common tools are on the bottom of the page and look like small dials.
+They control layer transparency/opacity and background removal.
 
 Background Removal is particularly useful with historical maps because it allows us to overlay the map data while not showing the blank space on the paper.
 
@@ -25,12 +28,13 @@ Background Removal is particularly useful with historical maps because it allows
 
 Other functionalities and keyboard shortcuts include:
 
-- Toggle transparency on and off with `Space`
-- Toggle background removal with `B`
-- Display the mask with the `M`
-- Change the transformation algorithm with `T`
-- Display a grid over the image with `G`
-- Use `D` to cycle display of distortions: surface deformation, angle distortion, or no distortion.
+- Toggle transparency on and off with <kbd>Space</kbd>
+- Toggle background removal with <kbd>B</kbd>
+- Display the mask with <kbd>M</kbd>
+- Change the transformation algorithm with <kbd>T</kbd>
+- Display a grid over the image with <kbd>G</kbd>
+- Use <kbd>D</kbd> to cycle display of distortions: surface deformation, angle distortion, or no distortion
+
 
 ## Viewing stitched atlas sheets
 
@@ -52,20 +56,19 @@ And if someone has already created a mask but hasn't started Georeferencing, it 
 
 For objects with multiple maps:
 
-- `[` and `]` keys cycle through the different maps
-- `right click` on a map to adjust the order of the map layers
+- <kbd>[</kbd> and <kbd>]</kbd> keys cycle through the different maps  
+- <kbd>Right Click</kbd> on a map to adjust the order of the map layers
 
 ## Changing Transformation Algorithm
 
-As we learned, ground control points (GCPs) are defined locations where known features are matched with already-georeferenced data (like a basemap.)
-
+As we learned in Lesson 2, ground control points (GCPs) are defined locations where known features are matched with already-georeferenced data (like a basemap.)
 From there, the warping of the image is done via an algorithm to extrapolate the GCPs to the entire image.
+
+You cycle through the transformation algorithms with <kbd>T</kbd>.
 
 There are numerous transformation algorithms and we may see different results depending on the algorithm we use. Some will introduce more distortion to the image, making it appear stretched and distroted. This is commonly called "rubber sheeting". 
 
 ![Image](images/transform.gif)
-
-You cycle through the transformation algorithms with `T`.
 
 ## XYZ Tiles in GIS
 
