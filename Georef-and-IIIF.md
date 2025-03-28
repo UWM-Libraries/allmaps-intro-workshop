@@ -76,19 +76,28 @@ At its core, IIIF allows for **interoperability** — making it easier for cultu
 Learn more about how it works at [iiif.io](https://iiif.io/get-started/how-iiif-works/).  
 ([source](https://iiif.io/get-started/how-iiif-works/))
 
+Take a look at the AGSL's treasured [Leardo Mappamundi](https://collections.lib.uwm.edu/digital/collection/agdm/id/538/).
+Clicking on the expand arrows allows us to view the map in stunning detail right in our browser, without the need to download large image files.
+But beyond making images zoomable, IIIF does so much more...
+
 
 ### Finding IIIF maps to use in Allmaps
 
-Allmaps works best with large geographic scale, such as maps of neighborhoods, cities, states, or countries. While you can georeference small scale maps like world maps, the distortion that can be introduced by the georeferencing process can make them harder, not easier, to work with.
-Allmaps excels at georeferencing city atlases containing multiple sheets collectively covering an area. 
+Allmaps works best with large geographic scale, such as maps of neighborhoods, cities, states, or countries. While you can georeference small scale maps like world maps, the distortion that can be introduced by the georeferencing process can make them harder to work with
+(because the majority of web mapping applications use Web Mercator coordinate reference systems). Allmaps excels at georeferencing city atlases; city, county, and state maps; and topographic or thematic maps in a series. 
 
 Any map that is hosted using IIIF will work in Allmaps.
-The IIIF consortium lists some collections [at this link](https://iiif.io/guides/finding_resources/). Note some very well known map collections including the [Library of Congress](https://www.loc.gov/maps) and [The David Rumsey Map Collection](https://www.davidrumsey.com/luna/servlet/view/all).
+The IIIF consortium lists some collections [at this link](https://iiif.io/guides/finding_resources/). Note some very well known map collections including 
+the [Library of Congress](https://www.loc.gov/maps) and [The David Rumsey Map Collection](https://www.davidrumsey.com/luna/servlet/view/all).
 
-If you launch the Allmaps Editor [(editor.allmaps.org)](https://editor.allmaps.org), some maps hosted by some Allmaps partners (including the AGSL) that are waiting to be georeferenced are displayed.
+If you launch the Allmaps Editor [(editor.allmaps.org)](https://editor.allmaps.org),
+some maps hosted by some Allmaps partners (including the AGSL) that are waiting to be georeferenced are displayed.
 
-If you're on the [AGSL Digital Map Collection](https://uwm.edu/lib-collections/agsl-digital-map-collection/) site and have a particular map you would like to georefernece, you need to find its IIIF Manifest URL. 
+If you're on the [AGSL Digital Map Collection](https://uwm.edu/lib-collections/agsl-digital-map-collection/)
+site and have a particular map you would like to georefernece, you need to find its IIIF Manifest URL. 
 You can find this at the bottom of the page of any object. 
+
+![Image](images/manifestURL.png)
 
 Other websites may require a bit more sluthing to find the URL. On the David Rumsey Collection you will find the URL under the share menu. Other websites may not expose their manifest URLs at all, but you can use tools like the [DetectIIIF browser](https://seige.digital/en/detektiiif/) extension to help.
 
