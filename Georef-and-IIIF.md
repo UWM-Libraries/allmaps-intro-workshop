@@ -14,7 +14,7 @@ title: Georeferencingt and IIIF
 
 ## [here.allmaps.org](here.allmaps.org)
 
-Go to [here.allmaps.org](here.allmaps.org) in your browser and, if prompted, allow the website to access your location.
+Go to [here.allmaps.org](https://here.allmaps.org) in your browser and, if prompted, allow the website to access your location.
 
 The maps returned are maps that have been Georeferenced using the Allmaps platform. They're all maps held in digital collections, for example
 the [AGSL Digital Map Collection](https://uwm.edu/lib-collections/agsl-digital-map-collection/).
