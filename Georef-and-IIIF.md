@@ -12,7 +12,7 @@ title: Georeferencingt and IIIF
 
 # Lesson 1: Georeferencing and IIIF
 
-## [here.allmaps.org](here.allmaps.org)
+## [here.allmaps.org](https://here.allmaps.org)
 
 Go to [here.allmaps.org](https://here.allmaps.org) in your browser and, if prompted, allow the website to access your location.
 
