@@ -92,7 +92,22 @@ cd ~/allmaps/agsl-green-bay
 
 ```bash
 allmaps fetch full-image "https://collections.lib.uwm.edu/digital/iiif/agdm/5922"
-mv full-image.jpg d30944a32ca34085.jpg
+mv *.jpg 82b3f8acb9a05d5b.jpg
+```
+
+By default, `allmaps fetch full-image` may not download the highest-resolution version.
+
+To check if you downloaded the correct size:
+
+```bash
+curl -s https://collections.lib.uwm.edu/digital/iiif/agdm/5922/info.json | jq '.sizes'
+```
+
+If the image dimensions listed in the `.vrt` file or Allmaps annotation don't match your downloaded image, use `dezoomify-rs`:
+
+```bash
+dezoomify-rs "https://collections.lib.uwm.edu/digital/iiif/agdm/5922" full.jpg
+mv full.jpg 82b3f8acb9a05d5b.jpg
 ```
 
 ### 3. Download the Georeference Annotation
@@ -118,8 +133,9 @@ code green_bay_geotiff.sh
 Make these adjustments:
 
 - **Remove** any `-cutline_srs` flag if present.
-- **Add** `-multi -wm 2048` to the `gdalwarp` command.
-- **Ensure** the image filename matches: `d30944a32ca34085.jpg`
+- **Add** `-multi -wm 2048` to the `gdalwarp` command. (Include '\')
+- **Ensure** the image filename matches: `"82b3f8acb9a05d5b.jpg"`
+- **Verify** the output filenames in `gdalwarp` and `gdalbuildvrt` are consistent, and use `\` for line continuation if the command spans multiple lines.
 
 ### 6. Run the Script
 
@@ -127,7 +143,11 @@ Make these adjustments:
 bash green_bay_geotiff.sh
 ```
 
-### 7. Verify the Output
+Troubleshooting script failures and errors:
+* See above "Download the IIIF Image" step if your image size in wrong.
+* Ensure you've made the appopriate adjustments in the generated shell script in the "Edit the Script" step above.
+
+### 7. Verify the Output with GDAL
 
 ```bash
 gdalinfo d30944a32ca34085_*.tif
