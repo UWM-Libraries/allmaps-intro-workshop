@@ -113,6 +113,7 @@ To go even further, explore the collection of [Allmaps Observable Notebooks](htt
 * * *
 
 <div class="button-group">
-    <a href="index.html" class="button">Back to Home</a>
-    <a href="Allmaps.html" class="button">Previous Lesson: Georeferencing in Allmaps</a>
+    <a href="Allmaps.html" class="button">Previous Lesson: Using Allmaps to Georeference Maps</a>
+    <a href="CLI-GeoTIFF.html" class="button">Next Lesson: Allmaps CLI (Advanced)</a>
 </div>
+    <a href="index.html" class="button">Back to Home</a>
