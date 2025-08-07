@@ -25,6 +25,7 @@ maps with the [Allmaps](allmaps.org) platform.
 - [Lesson 1: Georeferencing and IIIF](/Georef-and-IIIF.md)
 - [Lesson 2: Using Allmaps to Georeference Maps](/Allmaps.md)
 - [Lesson 3: Viewing and Using Maps Georeferenced in Allmaps](/Viewer.md)
+- [Lesson 4: Allmaps CLI (Advanced)](/CLI-GeoTIFF.md)
 
 ## Resources
 
