@@ -158,3 +158,10 @@ Check:
 - EPSG:3857 coordinate system
 - Output dimensions and pixel size
 - Geo bounding box and COG layout
+
+--------
+
+<div class="button-group">
+    <a href="Allmaps.html" class="button">Previous Lesson: Doing more with Allmaps</a>
+    <a href="index.html" class="button">Back to Home</a>
+</div>
