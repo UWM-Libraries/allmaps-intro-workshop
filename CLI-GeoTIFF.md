@@ -2,6 +2,43 @@
 layout: default
 title: Allmaps CLI - Generate a Cloud-Optimized GeoTIFF
 ---
+# Getting Ready
+
+Note: This assumes some familiarity with the command line in a Unix environment
+(Linux, Mac, or a Unix-like enviornment on a Windows PC),
+installing packages, and 
+generating and running scripts from the command line.
+
+# Windows Only: Set up WSL
+
+[Windows Subsystem for Linux Documentation](https://learn.microsoft.com/en-us/windows/wsl/)
+
+If you don't have a Linux distribution set up for WSL, install Ubuntu:
+
+`wsl --install -d Ubuntu`
+
+Now you can launch a Ubuntu environment from your Windows desktop environment.
+
+# Environment Setup
+
+```bash
+sudo apt update && sudo apt upgrade -y
+
+# Basic developer tools (optional)
+sudo apt install -y build-essential curl git nano
+
+# Node.js & npm (for Allmaps CLI)
+curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+sudo apt install -y nodejs
+
+# GDAL (geospatial library)
+sudo apt install -y gdal-bin libgdal-dev
+
+# Python tools (optional)
+sudo apt install -y python3-pip python3-venv
+```
+
+--------------------
 
 # Generating a GeoTIFF  using Allmaps CLI
 
