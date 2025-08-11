@@ -3,20 +3,29 @@ layout: home
 title: Home
 ---
 
-## Welcome to the **{{ site.title }}!** 
+## Welcome to **{{ site.title }}!** 
 
-**Date**: August 15, 1969
+This is an introductory workshop focused on georeferencing
+maps with the [Allmaps](allmaps.org) platform.
 
-**Time**: 7:00 AM CST
+## Learning Goals
 
-**Location**: Max Yasgur's dairy farm in Bethel, New York
+* Find resources that use IIIF and are therefore complaint with Allmaps
+* Learn how to locate IIIF manifest links
+* Learn how to open a manifest in Allmaps Editor
+* Learn to mask and create Ground Control Points
+* Learn how to refine your results
+* View the georeferenced map in Viewer 
+* Use the Georeferenced map in GIS
 
-<hr>
+## Lessons
 
-## Homepage Content!
+- [Lesson 1: Georeferencing and IIIF](/Georef-and-IIIF.md)
+- [Lesson 2: Using Allmaps to Georeference Maps](/Allmaps.md)
+- [Lesson 3: Viewing and Using Maps Georeferenced in Allmaps](/Viewer.md)
+- [Lesson 4: Allmaps CLI (Advanced)](/CLI-GeoTIFF.md)
 
-This is where your homepage content can go!
+## Resources
 
-Talk about pre-requisites or what kinds of snacks you will have.
-
-<!-- You can add additional intro or learning objectives here if desired -->
+* [Allmaps Documentation Site](https://allmaps.org/docs/introduction)
+* [AGSL Digtial Map Collection](https://uwm.edu/lib-collections/agsl-digital-map-collection/)

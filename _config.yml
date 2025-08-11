@@ -1,11 +1,11 @@
-title: UWM Workshop Template # The main title for the workshop
+title: Georeferencing Maps with Allmaps # The main title for the workshop
 email: srappel@uwm.edu # The primary contact email for the workshop
 author: Stephen Appel # The author of the workshop
-github_username: #uwm-libraries # The GitHub username for the workshop author
+github_username: uwm-libraries # The GitHub username for the workshop author
 website: https://uwm.edu/libraries/ # The website for the workshop author or institution
 description: >-
-  A reusable template for building self-paced technology workshops at the University of Wisconsin–Milwaukee.
-baseurl: "/workshop-template" # Change to match your repo name when deploying
+  This is an introductory workshop focused on georeferencing maps with the Allmaps platform.
+baseurl: "/allmaps-intro-workshop" # Change to match your repo name when deploying
 url: "https://uwm-libraries.github.io"
 
 # Collections

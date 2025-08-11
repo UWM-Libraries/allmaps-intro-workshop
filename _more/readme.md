@@ -3,7 +3,7 @@ layout: home
 title: "Template Instructions"
 position: 0
 permalink: /more/readme/
-published: true
+published: false
 ---
 
 ## How to use this Template

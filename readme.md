@@ -1,3 +1,7 @@
+# allmaps-intro-workshop
+Workshop for Georerferencing IIIF Maps in Allmaps
+
+
 # UWM Workshop Template
 
 A reusable Jekyll template for building technology-focused workshop sites with University of Wisconsin–Milwaukee (UWM) branding standards.

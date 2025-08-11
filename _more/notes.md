@@ -3,6 +3,7 @@ layout: home
 title: "Instructor Notes"
 position: 2
 permalink: /more/notes/
+published: true
 ---
 
 # Instructor Notes

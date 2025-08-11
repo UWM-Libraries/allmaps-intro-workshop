@@ -1,7 +1,10 @@
 ---
-layout: default
-title: Allmaps CLI - Generate a Cloud-Optimized GeoTIFF
+layout: lesson
+title: "Lesson 4: Allmaps CLI (Advanced)"
+position: 4
+permalink: /lessons/cli/
 ---
+
 # Getting Ready
 
 Note: This assumes some familiarity with the command line in a Unix environment
@@ -158,10 +161,3 @@ Check:
 - EPSG:3857 coordinate system
 - Output dimensions and pixel size
 - Geo bounding box and COG layout
-
---------
-
-<div class="button-group">
-    <a href="Allmaps.html" class="button">Previous Lesson: Doing more with Allmaps</a>
-    <a href="index.html" class="button">Back to Home</a>
-</div>
