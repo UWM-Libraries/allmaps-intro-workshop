@@ -1,0 +1,60 @@
+---
+layout: default
+---
+
+<div class="layout-with-sidebar">
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <a href="{{ '/' | relative_url }}">
+        <img src="{{ '/assets/images/uwm-logo.svg' | relative_url }}" alt="UWM Libraries logo" class="sidebar-logo" />
+      </a>
+      <h2>{{ site.organization }}</h2>
+      <p class="sidebar-tagline"><strong>{{ site.title }}</strong></p>
+    </div>
+
+    {% assign lessons = site.lessons | sort: 'position' %}
+    <nav class="lesson-sidebar-nav">
+      <ul>
+        <li><a href="{{ '/' | relative_url }}">Workshop Home</a></li>
+        {% for l in lessons %}
+          <li>
+            <a href="{{ l.url | relative_url }}" class="{% if l.url == page.url %}active{% endif %}">
+              {{ l.title }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </aside>
+
+  <div class="main-content">
+    <nav class="breadcrumbs">
+      <a href="{{ '/' | relative_url }}">Workshop Home</a> / <span class="current">{{ page.title }}</span>
+    </nav>
+
+    {{ content }}
+
+    {% assign current_index = nil %}
+    {% for l in lessons %}
+      {% if l.url == page.url %}{% assign current_index = forloop.index0 %}{% endif %}
+    {% endfor %}
+
+    {% if current_index != nil %}
+      {% assign prev_index = current_index | minus: 1 %}
+      {% assign next_index = current_index | plus: 1 %}
+
+      <div class="lesson-nav">
+        <ul>
+          {% if prev_index >= 0 %}
+            {% assign prev = lessons[prev_index] %}
+            <li><a class="btn" href="{{ prev.url | relative_url }}">← {{ prev.title }}</a></li>
+          {% endif %}
+          {% if next_index < lessons.size %}
+            {% assign nxt = lessons[next_index] %}
+            <li><a class="btn" href="{{ nxt.url | relative_url }}">{{ nxt.title }} →</a></li>
+          {% endif %}
+        </ul>
+      </div>
+    {% endif %}
+  </div>
+</div>

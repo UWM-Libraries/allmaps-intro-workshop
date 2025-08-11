@@ -1,31 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <title>{{ page.title | default: site.title }}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="{{ '/assets/images/favicon.svg' | relative_url }}">
+    <title>{{ page.title }} | {{ site.title }}</title>
+
+    <!-- Roboto from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
   </head>
   <body>
-    <header class="site-header">
+    <a class="skip-to-content" href="#main">Skip to content</a>
+    <!-- <header class="site-header">
       <div class="header-inner">
-          <img src="{{ 'images/uwm-logo.svg' | relative_url }}" alt="University of Wisconsin–Milwaukee logo" class="uwm-logo">
-        <div class="header-text">
-          <h1>{{ site.title }}</h1>
-          <p class="tagline">{{ site.description }}</p>
-        </div>
+        <h1 class="site-title">
+          <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
+        </h1>
+        <nav class="site-nav">
+          <ul>
+            <li><a href="{{ '/' | relative_url }}">Home</a></li>
+            <li><a href="{{ '/about/' | relative_url }}">About</a></li>
+            <li><a href="{{ '/contact/' | relative_url }}">Contact</a></li>
+          </ul>
+        </nav>
       </div>
-    </header>
+    </header> -->
 
-    <main class="content-wrapper">
-      <div class="content">
-        {{ content }}
-      </div>
+    <main id="main" class="site-content">
+      {{ content }}
     </main>
 
     <footer class="site-footer">
-      <p>© {{ site.time | date: '%Y' }} UWM Libraries · <a href="https://uwm.edu/libraries/">uwm.edu/libraries</a> <a href="https://github.com/UWM-Libraries/allmaps-intro-workshop/blob/main/LICENSE">MIT License</a></p>
+      <p>&copy; {{ site.time | date: "%Y" }} University of Wisconsin–Milwaukee. All rights reserved.</p>
     </footer>
   </body>
 </html>
