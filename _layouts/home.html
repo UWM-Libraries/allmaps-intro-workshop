@@ -1,0 +1,80 @@
+---
+layout: default
+---
+
+<div class="layout-with-sidebar">
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <a href="{{ '/' | relative_url }}">
+        <img src="{{ '/assets/images/uwm-logo.svg' | relative_url }}" alt="UWM Libraries logo" class="sidebar-logo" />
+      </a>
+      <h2>UWM Libraries</h2>
+      <p class="sidebar-tagline">Workshop Template</p>
+    </div>
+
+    <div class="sidebar-contact">
+      <p><strong>Workshop Home:</strong><br>
+      <a href="{{ '/' | relative_url }}">Go to home</a>
+
+      {% if site.author %}
+      <p><strong>Author:</strong><br>
+        {% if site.email %}
+        <a href="mailto:{{ site.email }}">{{ site.author }}</a></p>
+        {% else %}
+        {{ site.author }}</p>
+        {% endif %}
+      {% endif %}
+
+      {% if site.email %}
+      <p><strong>Contact:</strong><br>
+      <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+      {% endif %}
+
+      {% if site.github_username %}
+      <p><strong>GitHub:</strong><br>
+      <a href="https://github.com/{{ site.github_username }}">
+        {{ site.github_username }}
+      </a></p>
+      {% endif %}
+
+      {% if site.website %}
+      <p><strong>Website:</strong><br>
+      <a href="{{ site.website }}">{{ site.website }}</a></p>
+      {% endif %}
+    </div>
+  </aside>
+
+  <div class="main-content">
+    <section class="home-intro">
+      <h1>{{ site.title }}</h1>
+      <p class="lead">{{ site.description }}</p>
+      {{ content }}
+    </section>
+
+    <hr>
+    <section class="lesson-listing">
+      <h2>Workshop Lessons</h2>
+      <ol class="lesson-links">
+        {% assign lessons_sorted = site.lessons | sort: "position" %}
+        {% for lesson in lessons_sorted %}
+          <li>
+            <a href="{{ lesson.permalink | relative_url }}">{{ lesson.title }}</a>
+          </li>
+        {% endfor %}
+      </ol>
+    </section>
+
+    <hr>
+    <section class="more-listing">
+      <h2>More Resources</h2>
+      <ol class="more-links">
+        {% assign more_sorted = site.more | sort: "position" %}
+        {% for more in more_sorted %}
+          <li>
+            <a href="{{ more.permalink | relative_url }}">{{ more.title }}</a>
+          </li>
+        {% endfor %}
+      </ol>
+    </section>
+  </div>
+</div>

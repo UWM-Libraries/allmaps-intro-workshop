@@ -1,0 +1,30 @@
+title: UWM Workshop Template # The main title for the workshop
+email: srappel@uwm.edu # The primary contact email for the workshop
+author: Stephen Appel # The author of the workshop
+github_username: #uwm-libraries # The GitHub username for the workshop author
+website: https://uwm.edu/libraries/ # The website for the workshop author or institution
+description: >-
+  A reusable template for building self-paced technology workshops at the University of Wisconsin–Milwaukee.
+baseurl: "/workshop-template" # Change to match your repo name when deploying
+url: "https://uwm-libraries.github.io"
+
+# Collections
+collections:
+  lessons:
+    output: true
+    permalink: /lessons/:name/
+  more:
+    output: true
+    permalink: /more/:name/
+
+# Build settings
+permalink: pretty
+plugins:
+  - jekyll-feed
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter_opts:
+    block:
+      line_numbers: false # Change to true if you want them

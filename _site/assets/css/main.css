@@ -1,0 +1,329 @@
+@charset "UTF-8";
+html {
+  --uwm-gold: #FFB81C;
+  --panther-black: #000000;
+  --uwm-white: #FFFFFF;
+  --uwm-link: #0057B8;
+  --uwm-gray: #58595B;
+  --uwm-teal: #008675;
+  --uwm-aqua: #00B2A9;
+  --uwm-lime: #C4D600;
+  --uwm-orange: #F26622;
+  --uwm-cream: #F1EAD1;
+  --font-primary: "Futura PT", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-secondary: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* Base styles */
+body {
+  font-family: var(--font-secondary);
+  background-color: var(--uwm-white);
+  color: var(--panther-black);
+  line-height: 1.6;
+  margin: 0;
+  padding: 1rem;
+  max-width: 200ch;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-primary);
+  color: var(--panther-black);
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+a {
+  color: var(--uwm-link);
+  text-decoration: none;
+}
+
+a:hover {
+  color: #003366;
+  text-decoration: underline;
+}
+
+button, .btn {
+  background-color: var(--uwm-gold);
+  color: var(--panther-black);
+  font-weight: bold;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-family: var(--font-secondary);
+  cursor: pointer;
+  border-radius: 0.25rem;
+}
+
+button:hover, .btn:hover {
+  background-color: var(--uwm-orange);
+}
+
+/* Lesson Navigation Button Styles */
+.lesson-nav {
+  margin-top: 2rem;
+}
+.lesson-nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+/* Sidebar Stuff */
+.sidebar-contact {
+  font-size: 0.9rem;
+  padding: 1rem;
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+.sidebar-contact p {
+  margin-bottom: 1rem;
+}
+
+.sidebar-contact a {
+  color: var(--uwm-link);
+  text-decoration: underline;
+}
+
+.sidebar-contact a:hover {
+  text-decoration: none;
+}
+
+.sidebar-header {
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+  background-color: var(--uwm-cream);
+}
+
+.sidebar-header h2 {
+  font-size: 1rem;
+  margin: 0;
+  color: var(--panther-black);
+  font-family: var(--font-primary);
+}
+
+.sidebar-tagline {
+  font-size: 0.85rem;
+  color: var(--uwm-gray);
+  margin-top: 0.25rem;
+  font-family: var(--font-secondary);
+}
+
+.layout-with-sidebar {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.sidebar {
+  flex: 0 0 300px;
+  border-right: 1px solid var(--uwm-gray);
+  padding-right: 1rem;
+}
+
+.lesson-sidebar-nav ul {
+  list-style: none;
+  padding-left: 0;
+}
+.lesson-sidebar-nav ul li {
+  margin-bottom: 0.5rem;
+}
+.lesson-sidebar-nav ul a {
+  display: block;
+  padding: 0.25rem 0.5rem;
+  color: var(--uwm-black);
+  text-decoration: none;
+}
+.lesson-sidebar-nav ul a.active {
+  font-weight: bold;
+  background-color: var(--uwm-cream);
+  border-left: 4px solid var(--uwm-gold);
+}
+.lesson-sidebar-nav ul a:hover {
+  text-decoration: underline;
+}
+
+.main-content {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+.breadcrumbs a {
+  color: var(--uwm-black);
+  text-decoration: none;
+}
+.breadcrumbs .current {
+  font-weight: bold;
+  color: var(--uwm-black);
+}
+.breadcrumbs s a:hover {
+  text-decoration: underline;
+}
+
+/* Code blocks */
+pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.9rem;
+}
+
+pre {
+  width: 100%;
+  max-width: 120ch;
+  margin: 1.5rem 0;
+  padding: 1rem;
+  overflow-x: auto;
+  background-color: #f6f8fa;
+  border-left: 4px solid var(--uwm-gold);
+  border-radius: 4px;
+}
+
+code {
+  background-color: #f6f8fa;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+  border: none;
+}
+
+/* --------------------------------------------------
+   Callouts (Just the Docs-style with UWM Colors)
+-------------------------------------------------- */
+.callout {
+  padding: 1rem 1.25rem;
+  margin: 2rem 0;
+  border-left: 4px solid var(--uwm-gray);
+  border-radius: 4px;
+  background-color: var(--uwm-cream);
+  max-width: 90ch;
+  font-size: 0.95rem;
+}
+.callout.important {
+  border-left-color: var(--uwm-blue);
+  background-color: #e8f0fa;
+}
+.callout.warning {
+  border-left-color: var(--uwm-orange);
+  background-color: #fff4e5;
+}
+.callout.note {
+  border-left-color: var(--uwm-gold);
+  background-color: #fffbea;
+}
+.callout.new {
+  border-left-color: var(--uwm-teal);
+  background-color: #e6f9f7;
+}
+.callout.tip {
+  border-left-color: var(--uwm-aqua);
+  background-color: #e5f7f8;
+}
+.callout strong {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: bold;
+}
+
+/* -------------------------------------------
+   Responsive tweaks
+   Base breakpoint: tablets & phones
+------------------------------------------- */
+@media (max-width: 960px) {
+  .layout-with-sidebar {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0.75rem;
+  }
+  .sidebar {
+    flex: 0 0 auto; /* don’t reserve width */
+    border-right: 0;
+    border-bottom: 1px solid var(--uwm-gray);
+    padding-right: 0;
+    padding-bottom: 0.75rem;
+  }
+  .sidebar-header {
+    padding: 0.75rem 0;
+  }
+  .sidebar-logo { /* if you added a logo class earlier */
+    max-width: 140px;
+    height: auto;
+  }
+  .lesson-sidebar-nav ul {
+    margin: 0.25rem 0 0;
+  }
+  .lesson-sidebar-nav a {
+    padding: 0.5rem 0.25rem;
+  }
+  .main-content {
+    padding-top: 0.25rem;
+  }
+  .breadcrumbs {
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+  }
+  /* Buttons: easier tap targets, wrap nicely */
+  .btn,
+  button {
+    padding: 0.6rem 0.9rem;
+  }
+  .lesson-nav ul {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  /* Code blocks: full width on small screens */
+  pre {
+    max-width: 100%;
+    margin: 1rem 0;
+    font-size: 0.85rem; /* small bump down to avoid sideways scroll */
+  }
+  /* Images: never overflow */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+/* -------------------------------------------
+   Tiny phones
+------------------------------------------- */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+  h2 {
+    font-size: 1.3rem;
+  }
+  body {
+    padding: 0.75rem;
+  }
+}
+/* -------------------------------------------
+   Skip to Content Link
+------------------------------------------- */
+.skip-to-content {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--uwm-gold);
+  color: var(--panther-black);
+  padding: 0.5rem 1rem;
+  z-index: 1000;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 0 0 2px 0;
+  transition: top 0.2s ease;
+}
+
+.skip-to-content:focus {
+  top: 0;
+}
+
+/*# sourceMappingURL=main.css.map */

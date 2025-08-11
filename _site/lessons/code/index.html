@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/workshop-template/assets/images/favicon.svg">
+    <title>Lesson 4: Coding Examples | UWM Workshop Template</title>
+
+    <!-- Roboto from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/workshop-template/assets/css/main.css" />
+  </head>
+  <body>
+    <a class="skip-to-content" href="#main">Skip to content</a>
+    <!-- <header class="site-header">
+      <div class="header-inner">
+        <h1 class="site-title">
+          <a href="/workshop-template/">UWM Workshop Template</a>
+        </h1>
+        <nav class="site-nav">
+          <ul>
+            <li><a href="/workshop-template/">Home</a></li>
+            <li><a href="/workshop-template/about/">About</a></li>
+            <li><a href="/workshop-template/contact/">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header> -->
+
+    <main id="main" class="site-content">
+      <div class="layout-with-sidebar">
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <a href="/workshop-template/">
+        <img src="/workshop-template/assets/images/uwm-logo.svg" alt="UWM Libraries logo" class="sidebar-logo" />
+      </a>
+      <h2>UWM Libraries</h2>
+      <p class="sidebar-tagline">Workshop Template</p>
+    </div>
+
+    
+    <nav class="lesson-sidebar-nav">
+      <ul>
+        <li><a href="/workshop-template/">Workshop Home</a></li>
+        
+          <li>
+            <a href="/workshop-template/lessons/intro/" class="">
+              Lesson 1: Introduction
+            </a>
+          </li>
+        
+          <li>
+            <a href="/workshop-template/lessons/maps/" class="">
+              Lesson 2: Working with Maps
+            </a>
+          </li>
+        
+          <li>
+            <a href="/workshop-template/lessons/conclusion/" class="">
+              Lesson 3: Wrapping Up
+            </a>
+          </li>
+        
+          <li>
+            <a href="/workshop-template/lessons/code/" class="active">
+              Lesson 4: Coding Examples
+            </a>
+          </li>
+        
+      </ul>
+    </nav>
+  </aside>
+
+  <div class="main-content">
+    <nav class="breadcrumbs">
+      <a href="/workshop-template/">Workshop Home</a> / <span class="current">Lesson 4: Coding Examples</span>
+    </nav>
+
+    <h1 id="environment-setup">Environment Setup</h1>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt update <span class="o">&amp;&amp;</span> <span class="nb">sudo </span>apt upgrade <span class="nt">-y</span>
+
+<span class="c"># Basic developer tools (optional)</span>
+<span class="nb">sudo </span>apt <span class="nb">install</span> <span class="nt">-y</span> build-essential curl git nano
+
+<span class="c"># Install Node.js 20 using NodeSource</span>
+curl <span class="nt">-fsSL</span> https://deb.nodesource.com/setup_20.x | <span class="nb">sudo</span> <span class="nt">-E</span> bash -
+<span class="nb">sudo </span>apt <span class="nb">install</span> <span class="nt">-y</span> nodejs
+
+<span class="c"># GDAL (geospatial library)</span>
+<span class="nb">sudo </span>apt <span class="nb">install</span> <span class="nt">-y</span> gdal-bin libgdal-dev
+
+<span class="c"># Python tools (optional)</span>
+<span class="nb">sudo </span>apt <span class="nb">install</span> <span class="nt">-y</span> python3-pip python3-venv
+</code></pre></div></div>
+
+<h2 id="install-allmaps-cli">Install Allmaps CLI</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm <span class="nb">install</span> <span class="nt">-g</span> @allmaps/cli
+</code></pre></div></div>
+
+<p>Test it with</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>allmaps <span class="nt">--help</span>
+</code></pre></div></div>
+
+<h2 id="optional-utilities">Optional Utilities</h2>
+
+<p>For clipboard interaction and working with IIIF or bash scripts:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install</span> <span class="nt">-y</span> xclip jq moreutils
+</code></pre></div></div>
+
+<p>Optionally install <a href="https://github.com/lovasoa/dezoomify-rs"><code class="language-plaintext highlighter-rouge">dezoomify-rs</code></a> for full image extraction;
+This requires Rust.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">--proto</span> <span class="s1">'=https'</span> <span class="nt">--tlsv1</span>.2 <span class="nt">-sSf</span> https://sh.rustup.rs | sh
+cargo <span class="nb">install </span>dezoomify-rs
+</code></pre></div></div>
+
+
+
+    
+    
+
+    
+      
+      
+
+      <div class="lesson-nav">
+        <ul>
+          
+            
+            <li><a class="btn" href="/workshop-template/lessons/conclusion/">← Lesson 3: Wrapping Up</a></li>
+          
+          
+        </ul>
+      </div>
+    
+  </div>
+</div>
+
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2025 University of Wisconsin–Milwaukee. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
