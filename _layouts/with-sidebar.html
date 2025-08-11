@@ -45,6 +45,7 @@ layout: default
 
       <div class="lesson-nav">
         <ul>
+            <li><a class="btn" href="{{ '/' | relative_url }}">Workshop Home</a></li>
           {% if prev_index >= 0 %}
             {% assign prev = lessons[prev_index] %}
             <li><a class="btn" href="{{ prev.url | relative_url }}">← {{ prev.title }}</a></li>
