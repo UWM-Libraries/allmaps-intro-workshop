@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/allmaps-intro-workshop/assets/images/favicon.svg">
+    <title>Lesson 3: Viewing and Using Maps Georeferenced in Allmaps | Georeferencing Maps with Allmaps</title>
+
+    <!-- Roboto from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/allmaps-intro-workshop/assets/css/main.css" />
+  </head>
+  <body>
+    <a class="skip-to-content" href="#main">Skip to content</a>
+    <!-- <header class="site-header">
+      <div class="header-inner">
+        <h1 class="site-title">
+          <a href="/allmaps-intro-workshop/">Georeferencing Maps with Allmaps</a>
+        </h1>
+        <nav class="site-nav">
+          <ul>
+            <li><a href="/allmaps-intro-workshop/">Home</a></li>
+            <li><a href="/allmaps-intro-workshop/about/">About</a></li>
+            <li><a href="/allmaps-intro-workshop/contact/">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header> -->
+
+    <main id="main" class="site-content">
+      <div class="layout-with-sidebar">
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <a href="/allmaps-intro-workshop/">
+        <img src="/allmaps-intro-workshop/assets/images/uwm-logo.svg" alt="UWM Libraries logo" class="sidebar-logo" />
+      </a>
+      <h2>UWM Libraries</h2>
+      <p class="sidebar-tagline"><strong>Georeferencing Maps with Allmaps</strong></p>
+    </div>
+
+    
+    <nav class="lesson-sidebar-nav">
+      <ul>
+        <li><a href="/allmaps-intro-workshop/">Workshop Home</a></li>
+        
+          <li>
+            <a href="/allmaps-intro-workshop/lessons/Georef-and-IIIF/" class="">
+              Lesson 1: Georeferencing and IIIF
+            </a>
+          </li>
+        
+          <li>
+            <a href="/allmaps-intro-workshop/lessons/Allmaps/" class="">
+              Lesson 2: Using Allmaps to Georeference Maps
+            </a>
+          </li>
+        
+          <li>
+            <a href="/allmaps-intro-workshop/lessons/viewer/" class="active">
+              Lesson 3: Viewing and Using Maps Georeferenced in Allmaps
+            </a>
+          </li>
+        
+          <li>
+            <a href="/allmaps-intro-workshop/lessons/cli/" class="">
+              Lesson 4: Allmaps CLI (Advanced)
+            </a>
+          </li>
+        
+      </ul>
+    </nav>
+  </aside>
+
+  <div class="main-content">
+    <nav class="breadcrumbs">
+      <a href="/allmaps-intro-workshop/">Workshop Home</a> / <span class="current">Lesson 3: Viewing and Using Maps Georeferenced in Allmaps</span>
+    </nav>
+
+    <div class="markdown-body">
+    <h1 id="lesson-3-doing-more-with-allmaps">Lesson 3: Doing more with Allmaps</h1>
+
+<h2 id="allmaps-viewer">Allmaps Viewer</h2>
+
+<p><a href="https://viewer.allmaps.org">Allmaps Viewer</a> is used to view georeferenced maps in Allmaps. Similar to the <strong>Results</strong> tab in the Editor, you can see the map overlaid on a web map.
+The Viewer also includes <strong>additional tools</strong> that let you customize the appearance and functionality of your map.</p>
+
+<p>Common tools (found at the bottom of the screen) include sliders that control <strong>layer transparency/opacity</strong> and <strong>background removal</strong>.</p>
+
+<p>Background removal is especially useful with historical maps—it removes the blank paper and allows the cartographic information to shine.</p>
+
+<p><img src="/allmaps-intro-workshop/assets/images/georef_nz8_Background.png" alt="Background removal comparison in Allmaps Viewer" /></p>
+
+<p>Keyboard shortcuts:</p>
+
+<ul>
+  <li><kbd>Space</kbd> – Toggle transparency on/off</li>
+  <li><kbd>B</kbd> – Toggle background removal</li>
+  <li><kbd>M</kbd> – Display the mask</li>
+  <li><kbd>T</kbd> – Change the transformation algorithm</li>
+  <li><kbd>G</kbd> – Display a grid over the image</li>
+  <li><kbd>D</kbd> – Cycle display of distortions: surface deformation, angle distortion, or none</li>
+</ul>
+
+<h2 id="viewing-stitched-atlas-sheets">Viewing Stitched Atlas Sheets</h2>
+
+<p>Take this example from the <a href="https://collections.lib.uwm.edu/digital/collection/agdm/id/36112">Milwaukee County land use and zoning atlas</a>.</p>
+
+<p>IIIF Manifest: <code class="language-plaintext highlighter-rouge">https://collections.lib.uwm.edu/iiif/info/agdm/36112/manifest.json</code></p>
+
+<p>Green symbols indicate sheets that are already georeferenced:</p>
+
+<p><img src="/allmaps-intro-workshop/assets/images/MultiPageGreen.png" alt="Green indicator for georeferenced pages" /></p>
+
+<p>Yellow warning symbols indicate maps with masks but no georeferencing yet:</p>
+
+<p><img src="/allmaps-intro-workshop/assets/images/MultiPageYellow.png" alt="Yellow warning symbol for masked-only pages" /></p>
+
+<p><a href="https://viewer.allmaps.org/?url=https%3A%2F%2Fcollections.lib.uwm.edu%2Fiiif%2Finfo%2Fagdm%2F36112%2Fmanifest.json">View this atlas in Allmaps Viewer</a> to see how stitched maps are displayed. As more sheets are georeferenced, they’ll appear in the viewer.</p>
+
+<p><img src="/allmaps-intro-workshop/assets/images/MultiPageStitch.png" alt="Example of stitched atlas sheets in Allmaps Viewer" /></p>
+
+<p>When working with multi-sheet objects:</p>
+
+<ul>
+  <li><kbd>[</kbd> and <kbd>]</kbd> – Cycle through maps</li>
+  <li><kbd>Right Click</kbd> – Change map layer order</li>
+</ul>
+
+<h2 id="changing-the-transformation-algorithm">Changing the Transformation Algorithm</h2>
+
+<p>As we covered in Lesson 2, ground control points (GCPs) define locations where features match across old and new maps. A transformation algorithm uses these points to warp the image accordingly.</p>
+
+<p>Cycle through algorithms using <kbd>T</kbd>.</p>
+
+<p>Different algorithms will produce different results. Some stretch or distort the image more than others—this is known as <strong>rubber sheeting</strong>.</p>
+
+<p><img src="/allmaps-intro-workshop/assets/images/transform.gif" alt="Comparison of different transformation algorithms" /></p>
+
+<h2 id="using-xyz-tiles-in-gis">Using XYZ Tiles in GIS</h2>
+
+<p>Allmaps provides a free <strong>XYZ tile server</strong>, allowing you to bring georeferenced maps directly into GIS software like QGIS.
+Note: this is not intended for permanent hosting.</p>
+
+<p>In <strong>QGIS</strong>, use the <strong>Add XYZ Layer</strong> tool:</p>
+
+<p><img src="/allmaps-intro-workshop/assets/images/QGIS1.png" alt="Opening XYZ tile layer dialog in QGIS" /></p>
+
+<p>Copy the <strong>XYZ Tile URL</strong> from the Allmaps Editor Share tools:</p>
+
+<p><img src="/allmaps-intro-workshop/assets/images/ShareXYZ.png" alt="Where to find the tile URL" /></p>
+
+<p>Then create a new XYZ Connection in QGIS and paste in the URL. No other changes are usually needed.</p>
+
+<p><img src="/allmaps-intro-workshop/assets/images/QGIS2.png" alt="Adding a new XYZ connection in QGIS" /></p>
+
+<p>Now you can use your georeferenced map directly in desktop GIS!</p>
+
+<p><img src="/allmaps-intro-workshop/assets/images/QGIS3.png" alt="Georeferenced map shown inside QGIS" /></p>
+
+<p>You can even use the <strong>Export</strong> tool to save the result as a <strong>GeoTIFF</strong>, a standard format for georeferenced images.</p>
+
+<p>More info on the Allmaps Tile Server is available in this <a href="https://observablehq.com/@allmaps/allmaps-tile-server">Observable notebook</a>.</p>
+
+<h2 id="more-you-can-do">More You Can Do</h2>
+
+<p>What will <em>you</em> do with your georeferenced maps?</p>
+
+<p>Here are just a few exciting examples:</p>
+
+<ul>
+  <li><a href="https://www.leventhalmap.org/articles/waltham-urban-atlas-essays/">Stories from Urban Atlases of Waltham</a></li>
+  <li><a href="https://www.atlascope.org/">Atlascope</a></li>
+  <li><a href="https://viewer.allmaps.org/?url=https%3A%2F%2Fsammeltassen.nl%2Fiiif-manifests%2Fallmaps%2Frivierahal-blijdorp.json">Architectural Drawings in Allmaps</a></li>
+  <li><a href="https://viewer.allmaps.org/?url=https%3A%2F%2Fannotations.allmaps.org%2Fimages%2F4bcc9463d2a68df4">Georeferenced Aerial Photographs</a></li>
+</ul>
+
+<p>To go even further, explore the collection of <a href="https://observablehq.com/@allmaps">Allmaps Observable Notebooks</a>:</p>
+
+<ul>
+  <li>Use IIIF maps in MapLibre, Leaflet, or OpenLayers</li>
+  <li>Draw vector <strong>GeoJSON</strong> layers on top of Allmaps</li>
+  <li>Georeference based on <strong>toponyms</strong> (place names)</li>
+  <li>Learn more about the <strong>code and architecture</strong> of Allmaps</li>
+</ul>
+
+</div>
+
+
+
+    
+    
+
+    
+      
+      
+
+      <div class="lesson-nav">
+        <ul>
+          
+            
+            <li><a class="btn" href="/allmaps-intro-workshop/lessons/Allmaps/">← Lesson 2: Using Allmaps to Georeference Maps</a></li>
+          
+          
+            
+            <li><a class="btn" href="/allmaps-intro-workshop/lessons/cli/">Lesson 4: Allmaps CLI (Advanced) →</a></li>
+          
+        </ul>
+      </div>
+    
+  </div>
+</div>
+
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2025 University of Wisconsin–Milwaukee. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

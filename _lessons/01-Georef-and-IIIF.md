@@ -32,7 +32,7 @@ Georeferencing scanned maps enables powerful spatial analysis:
 - Compare or verify features by overlaying two maps.
 - Create a *mosaic* for viewing multiple sheets at once in large map series.
 
-![Overlaying a historic map in GIS](assets/images/georef_bok.png)
+![Overlaying a historic map in GIS]({{ '/assets/images/georef_bok.png' | relative_url }})
 *The georeferencing process to place a digital image into a GIS* ([source](https://gistbok-ltb.ucgis.org/page/27/concept/8131))
 
 For objects with multiple sheets or pages—such as urban atlases—georeferencing can make the experience easier and more engaging.
@@ -41,7 +41,7 @@ We used georeferenced Sanborn Fire Insurance Maps to create our
 A similar project by the Leventhal Map & Education Center at the Boston Public Library (co-recipients of a NEH Digital Advancement Grant) used Allmaps
 to georeference urban atlas sheets for their fantastic [Atlascope application](https://www.atlascope.org/).
 
-![Screenshot of the Atlascope viewer with georeferenced map sheets](assets/images/Atlascope.png)
+![Screenshot of the Atlascope viewer with georeferenced map sheets]({{ '/assets/images/Atlascope.png' | relative_url }})
 
 Traditionally, georeferencing has been done in **GIS** (Geographic Information Systems).
 Thanks to modern, accessible web-mapping tools, platforms like **Allmaps** now make this process possible for non-experts—right in the browser.
@@ -90,10 +90,10 @@ If you launch the [Allmaps Editor](https://editor.allmaps.org), you'll see maps 
 To georeference a specific map from the [AGSL Digital Map Collection](https://uwm.edu/lib-collections/agsl-digital-map-collection/),
 you'll need to find its **IIIF Manifest URL**—located at the bottom of each item page.
 
-![Screenshot showing the location of the IIIF Manifest URL in the UWM digital collection](assets/images/manifestURL.png)
+![Screenshot showing the location of the IIIF Manifest URL in the UWM digital collection]({{ '/assets/images/manifestURL.png' | relative_url }})
 
 Other websites may require more sleuthing to find the manifest.
 On the David Rumsey Collection, it's listed under the **share** menu.
 If it’s not visible, tools like the [DetectIIIF browser extension](https://seige.digital/en/detektiiif/) can help.
 
-![Screenshot of the menu option to find IIIF manifests in the David Rumsey Map Collection](assets/images/rumsey.png)
+![Screenshot of the menu option to find IIIF manifests in the David Rumsey Map Collection]({{ '/assets/images/rumsey.png' | relative_url }})

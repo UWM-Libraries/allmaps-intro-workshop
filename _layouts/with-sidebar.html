@@ -8,8 +8,8 @@ layout: default
       <a href="{{ '/' | relative_url }}">
         <img src="{{ '/assets/images/uwm-logo.svg' | relative_url }}" alt="UWM Libraries logo" class="sidebar-logo" />
       </a>
-      <h2>UWM Libraries</h2>
-      <p class="sidebar-tagline">Workshop Template</p>
+      <h2>{{ site.organization }}</h2>
+      <p class="sidebar-tagline"><strong>{{ site.title }}</strong></p>
     </div>
 
     {% assign lessons = site.lessons | sort: 'position' %}

@@ -18,7 +18,7 @@ You can choose a map by either:
 1. Entering a **IIIF Manifest URL** in the text box at the top of the page
 2. Scrolling down to find a map in one of the highlighted collections
 
-![Start screen of the Allmaps Editor](assets/images/georef_nz1_start.png)
+![Start screen of the Allmaps Editor]({{ '/assets/images/georef_nz1_start.png' | relative_url }})
 
 ## Masking
 
@@ -26,15 +26,15 @@ The first step is adding a **clipping mask**. This involves drawing a line aroun
 
 Use the **Draw Mask** tab to add a mask. Click to add points, and double-click to close the polygon. If you mess up, click **Cancel** to start over.
 
-![Drawing a mask in Allmaps](assets/images/georef_nz3_Mask.png)
+![Drawing a mask in Allmaps]({{ '/assets/images/georef_nz3_Mask.png' | relative_url }})
 
 It's possible your image includes multiple maps! Each map gets its own mask.
 
-![Example of a scanned page with multiple maps](assets/images/greenpoint.jpg)
+![Example of a scanned page with multiple maps]({{ '/assets/images/greenpoint.jpg' | relative_url }})
 
 Much of the time, your mask will simply be a rectangle drawn just inside the map's neatline.
 
-![A rectangular mask drawn near the map corners](assets/images/georef_nz4_MaskCorner.png)
+![A rectangular mask drawn near the map corners]({{ '/assets/images/georef_nz4_MaskCorner.png' | relative_url }})
 
 ## Ground Control Points
 
@@ -42,7 +42,7 @@ Much of the time, your mask will simply be a rectangle drawn just inside the map
 
 Use the **Georeference** tab to begin placing GCPs. To create one, find a location that clearly matches on both sides—such as a street intersection or the corner of a recognizable building. Click the same spot on both images.
 
-![Adding ground control points in Allmaps](assets/images/georef_nz2_GCP.png)
+![Adding ground control points in Allmaps]({{ '/assets/images/georef_nz2_GCP.png' | relative_url }})
 
 ### GCP Best Practices for Urban Atlases:
 
@@ -54,13 +54,13 @@ Use the **Georeference** tab to begin placing GCPs. To create one, find a locati
 
 Remember, landscapes change: roads shift, water levels fluctuate, buildings appear and disappear. For example, using Brown Deer Road may not always be ideal:
 
-![Example showing problematic alignment using Brown Deer Road](assets/images/MultiPage_BrownDeer.png)
+![Example showing problematic alignment using Brown Deer Road]({{ '/assets/images/MultiPage_BrownDeer.png' | relative_url }})
 
 ### What is this doing?
 
 Behind the scenes, placing GCPs in Allmaps creates a [**Georeference Annotation**](https://iiif.io/api/extension/georef/).
 
-![Diagram of resource vs geometry coordinates](assets/images/georef_nz2_2.png)
+![Diagram of resource vs geometry coordinates]({{ '/assets/images/georef_nz2_2.png' | relative_url }})
 
 Each point creates a pair of values:
 - **Resource coordinates** – pixel location in the image (e.g. 3017, 4367)
@@ -74,7 +74,7 @@ Allmaps uses this data to calculate the warping or stretching needed to align th
 
 The **Results** tab gives you a preview of the map with georeferencing applied. It's a great way to check alignment and see if you're on the right track.
 
-![Preview of results in Allmaps](assets/images/georef_nz5_result.png)
+![Preview of results in Allmaps]({{ '/assets/images/georef_nz5_result.png' | relative_url }})
 
 In the bottom right, you’ll see a drawer with more tools:
 
@@ -87,7 +87,7 @@ In the bottom right, you’ll see a drawer with more tools:
   - GeoJSON download
   - XYZ tile link (usable in web maps or GIS software)
 
-![The share menu in Allmaps](assets/images/georef_nz6_Share.png)
+![The share menu in Allmaps]({{ '/assets/images/georef_nz6_Share.png' | relative_url }})
 
 We'll explore the Viewer in the next lesson. For now, click the **View in Allmaps Viewer** link in the share menu to continue.
 

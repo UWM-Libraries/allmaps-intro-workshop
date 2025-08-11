@@ -16,7 +16,7 @@ Common tools (found at the bottom of the screen) include sliders that control **
 
 Background removal is especially useful with historical maps—it removes the blank paper and allows the cartographic information to shine.
 
-![Background removal comparison in Allmaps Viewer](assets/images/georef_nz8_Background.png)
+![Background removal comparison in Allmaps Viewer]({{ '/assets/images/georef_nz8_Background.png' | relative_url }})
 
 Keyboard shortcuts:
 
@@ -35,15 +35,15 @@ IIIF Manifest: `https://collections.lib.uwm.edu/iiif/info/agdm/36112/manifest.js
 
 Green symbols indicate sheets that are already georeferenced:
 
-![Green indicator for georeferenced pages](assets/images/MultiPageGreen.png)
+![Green indicator for georeferenced pages]({{ '/assets/images/MultiPageGreen.png' | relative_url }})
 
 Yellow warning symbols indicate maps with masks but no georeferencing yet:
 
-![Yellow warning symbol for masked-only pages](assets/images/MultiPageYellow.png)
+![Yellow warning symbol for masked-only pages]({{ '/assets/images/MultiPageYellow.png' | relative_url }})
 
 [View this atlas in Allmaps Viewer](https://viewer.allmaps.org/?url=https%3A%2F%2Fcollections.lib.uwm.edu%2Fiiif%2Finfo%2Fagdm%2F36112%2Fmanifest.json) to see how stitched maps are displayed. As more sheets are georeferenced, they’ll appear in the viewer.
 
-![Example of stitched atlas sheets in Allmaps Viewer](assets/images/MultiPageStitch.png)
+![Example of stitched atlas sheets in Allmaps Viewer]({{ '/assets/images/MultiPageStitch.png' | relative_url }})
 
 When working with multi-sheet objects:
 
@@ -58,7 +58,7 @@ Cycle through algorithms using <kbd>T</kbd>.
 
 Different algorithms will produce different results. Some stretch or distort the image more than others—this is known as **rubber sheeting**.
 
-![Comparison of different transformation algorithms](assets/images/transform.gif)
+![Comparison of different transformation algorithms]({{ '/assets/images/transform.gif' | relative_url }})
 
 ## Using XYZ Tiles in GIS
 
@@ -67,19 +67,19 @@ Note: this is not intended for permanent hosting.
 
 In **QGIS**, use the **Add XYZ Layer** tool:
 
-![Opening XYZ tile layer dialog in QGIS](assets/images/QGIS1.png)
+![Opening XYZ tile layer dialog in QGIS]({{ '/assets/images/QGIS1.png' | relative_url }})
 
 Copy the **XYZ Tile URL** from the Allmaps Editor Share tools:
 
-![Where to find the tile URL](assets/images/ShareXYZ.png)
+![Where to find the tile URL]({{ '/assets/images/ShareXYZ.png' | relative_url }})
 
 Then create a new XYZ Connection in QGIS and paste in the URL. No other changes are usually needed.
 
-![Adding a new XYZ connection in QGIS](assets/images/QGIS2.png)
+![Adding a new XYZ connection in QGIS]({{ '/assets/images/QGIS2.png' | relative_url }})
 
 Now you can use your georeferenced map directly in desktop GIS!
 
-![Georeferenced map shown inside QGIS](assets/images/QGIS3.png)
+![Georeferenced map shown inside QGIS]({{ '/assets/images/QGIS3.png' | relative_url }})
 
 You can even use the **Export** tool to save the result as a **GeoTIFF**, a standard format for georeferenced images.
 

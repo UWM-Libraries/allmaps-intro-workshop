@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/allmaps-intro-workshop/assets/images/favicon.svg">
+    <title>Lesson 2: Using Allmaps to Georeference Maps | Georeferencing Maps with Allmaps</title>
+
+    <!-- Roboto from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/allmaps-intro-workshop/assets/css/main.css" />
+  </head>
+  <body>
+    <a class="skip-to-content" href="#main">Skip to content</a>
+    <!-- <header class="site-header">
+      <div class="header-inner">
+        <h1 class="site-title">
+          <a href="/allmaps-intro-workshop/">Georeferencing Maps with Allmaps</a>
+        </h1>
+        <nav class="site-nav">
+          <ul>
+            <li><a href="/allmaps-intro-workshop/">Home</a></li>
+            <li><a href="/allmaps-intro-workshop/about/">About</a></li>
+            <li><a href="/allmaps-intro-workshop/contact/">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header> -->
+
+    <main id="main" class="site-content">
+      <div class="layout-with-sidebar">
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <a href="/allmaps-intro-workshop/">
+        <img src="/allmaps-intro-workshop/assets/images/uwm-logo.svg" alt="UWM Libraries logo" class="sidebar-logo" />
+      </a>
+      <h2>UWM Libraries</h2>
+      <p class="sidebar-tagline"><strong>Georeferencing Maps with Allmaps</strong></p>
+    </div>
+
+    
+    <nav class="lesson-sidebar-nav">
+      <ul>
+        <li><a href="/allmaps-intro-workshop/">Workshop Home</a></li>
+        
+          <li>
+            <a href="/allmaps-intro-workshop/lessons/Georef-and-IIIF/" class="">
+              Lesson 1: Georeferencing and IIIF
+            </a>
+          </li>
+        
+          <li>
+            <a href="/allmaps-intro-workshop/lessons/Allmaps/" class="active">
+              Lesson 2: Using Allmaps to Georeference Maps
+            </a>
+          </li>
+        
+          <li>
+            <a href="/allmaps-intro-workshop/lessons/viewer/" class="">
+              Lesson 3: Viewing and Using Maps Georeferenced in Allmaps
+            </a>
+          </li>
+        
+          <li>
+            <a href="/allmaps-intro-workshop/lessons/cli/" class="">
+              Lesson 4: Allmaps CLI (Advanced)
+            </a>
+          </li>
+        
+      </ul>
+    </nav>
+  </aside>
+
+  <div class="main-content">
+    <nav class="breadcrumbs">
+      <a href="/allmaps-intro-workshop/">Workshop Home</a> / <span class="current">Lesson 2: Using Allmaps to Georeference Maps</span>
+    </nav>
+
+    <div class="markdown-body">
+    <h1 id="lesson-2-georeferencing-in-allmaps">Lesson 2: Georeferencing in Allmaps</h1>
+
+<p>In this lesson, we’ll get hands-on experience georeferencing maps in <strong>Allmaps</strong>.</p>
+
+<h2 id="allmaps-editor">Allmaps Editor</h2>
+
+<p>If you haven’t already, launch the Allmaps Editor by going to <a href="https://editor.allmaps.org">editor.allmaps.org</a>.</p>
+
+<p>You can choose a map by either:</p>
+
+<ol>
+  <li>Entering a <strong>IIIF Manifest URL</strong> in the text box at the top of the page</li>
+  <li>Scrolling down to find a map in one of the highlighted collections</li>
+</ol>
+
+<p><img src="/allmaps-intro-workshop/assets/images/georef_nz1_start.png" alt="Start screen of the Allmaps Editor" /></p>
+
+<h2 id="masking">Masking</h2>
+
+<p>The first step is adding a <strong>clipping mask</strong>. This involves drawing a line around the “map” areas of the document to exclude the collar or marginalia. In other words, you’re identifying the part of the scanned image that you want to georeference.</p>
+
+<p>Use the <strong>Draw Mask</strong> tab to add a mask. Click to add points, and double-click to close the polygon. If you mess up, click <strong>Cancel</strong> to start over.</p>
+
+<p><img src="/allmaps-intro-workshop/assets/images/georef_nz3_Mask.png" alt="Drawing a mask in Allmaps" /></p>
+
+<p>It’s possible your image includes multiple maps! Each map gets its own mask.</p>
+
+<p><img src="/allmaps-intro-workshop/assets/images/greenpoint.jpg" alt="Example of a scanned page with multiple maps" /></p>
+
+<p>Much of the time, your mask will simply be a rectangle drawn just inside the map’s neatline.</p>
+
+<p><img src="/allmaps-intro-workshop/assets/images/georef_nz4_MaskCorner.png" alt="A rectangular mask drawn near the map corners" /></p>
+
+<h2 id="ground-control-points">Ground Control Points</h2>
+
+<p><strong>Ground Control Points (GCPs)</strong> guide Allmaps in aligning the scanned image (left side) with real-world geography (right side).</p>
+
+<p>Use the <strong>Georeference</strong> tab to begin placing GCPs. To create one, find a location that clearly matches on both sides—such as a street intersection or the corner of a recognizable building. Click the same spot on both images.</p>
+
+<p><img src="/allmaps-intro-workshop/assets/images/georef_nz2_GCP.png" alt="Adding ground control points in Allmaps" /></p>
+
+<h3 id="gcp-best-practices-for-urban-atlases">GCP Best Practices for Urban Atlases:</h3>
+
+<ul>
+  <li><strong>Avoid water bodies</strong> – they change too much over time to be reliable.</li>
+  <li><strong>Use roads and buildings</strong> – as long as they haven’t been torn down or significantly altered.</li>
+  <li><strong>Check your progress</strong> – sometimes only a few GCPs are needed. Too many can actually introduce unwanted distortion. A good check-in is after placing 5–10 points.</li>
+</ul>
+
+<p>(<a href="https://cartinal.leventhalmap.org/guides/georeferencing-with-allmaps.html#best-practices-for-creating-gcps">Source</a>)</p>
+
+<p>Remember, landscapes change: roads shift, water levels fluctuate, buildings appear and disappear. For example, using Brown Deer Road may not always be ideal:</p>
+
+<p><img src="/allmaps-intro-workshop/assets/images/MultiPage_BrownDeer.png" alt="Example showing problematic alignment using Brown Deer Road" /></p>
+
+<h3 id="what-is-this-doing">What is this doing?</h3>
+
+<p>Behind the scenes, placing GCPs in Allmaps creates a <a href="https://iiif.io/api/extension/georef/"><strong>Georeference Annotation</strong></a>.</p>
+
+<p><img src="/allmaps-intro-workshop/assets/images/georef_nz2_2.png" alt="Diagram of resource vs geometry coordinates" /></p>
+
+<p>Each point creates a pair of values:</p>
+<ul>
+  <li><strong>Resource coordinates</strong> – pixel location in the image (e.g. 3017, 4367)</li>
+  <li><strong>Geometry coordinates</strong> – geographic location in longitude/latitude (e.g. 172.936215°E, 43.7589394°S)</li>
+</ul>
+
+<p>Allmaps uses this data to calculate the warping or stretching needed to align the image over the map.</p>
+
+<blockquote>
+  <p>6-digit coordinate precision is probably overkill — any excuse to link this <a href="https://xkcd.com/2170">XKCD comic on coordinate precision</a>!</p>
+</blockquote>
+
+<h2 id="results">Results</h2>
+
+<p>The <strong>Results</strong> tab gives you a preview of the map with georeferencing applied. It’s a great way to check alignment and see if you’re on the right track.</p>
+
+<p><img src="/allmaps-intro-workshop/assets/images/georef_nz5_result.png" alt="Preview of results in Allmaps" /></p>
+
+<p>In the bottom right, you’ll see a drawer with more tools:</p>
+
+<ul>
+  <li><strong>Information</strong> – about the IIIF resource</li>
+  <li><strong>GCP List</strong> – lists all your points; delete ones that don’t work</li>
+  <li><strong>Code</strong> – shows the actual Georeference Annotation (JSON format). You can copy and reuse this in the Viewer.</li>
+  <li><strong>Share</strong> – provides:
+    <ul>
+      <li>Link to view in Allmaps Viewer</li>
+      <li>Link to the annotation</li>
+      <li>GeoJSON download</li>
+      <li>XYZ tile link (usable in web maps or GIS software)</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="/allmaps-intro-workshop/assets/images/georef_nz6_Share.png" alt="The share menu in Allmaps" /></p>
+
+<p>We’ll explore the Viewer in the next lesson. For now, click the <strong>View in Allmaps Viewer</strong> link in the share menu to continue.</p>
+
+
+</div>
+
+
+
+    
+    
+
+    
+      
+      
+
+      <div class="lesson-nav">
+        <ul>
+          
+            
+            <li><a class="btn" href="/allmaps-intro-workshop/lessons/Georef-and-IIIF/">← Lesson 1: Georeferencing and IIIF</a></li>
+          
+          
+            
+            <li><a class="btn" href="/allmaps-intro-workshop/lessons/viewer/">Lesson 3: Viewing and Using Maps Georeferenced in Allmaps →</a></li>
+          
+        </ul>
+      </div>
+    
+  </div>
+</div>
+
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2025 University of Wisconsin–Milwaukee. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

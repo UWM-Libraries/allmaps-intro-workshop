@@ -354,3 +354,14 @@ pre code {
 .skip-to-content:focus {
   top: 0;
 }
+
+/* -------------------------------------------
+   Constrain Images
+------------------------------------------- */
+
+.markdown-body img {
+  max-width: 85%;
+  max-height: 600px; /* adjust to taste */
+  height: auto;
+  display: block;
+}

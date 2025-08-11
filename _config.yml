@@ -1,6 +1,7 @@
 title: Georeferencing Maps with Allmaps # The main title for the workshop
 email: srappel@uwm.edu # The primary contact email for the workshop
 author: Stephen Appel # The author of the workshop
+organization: UWM Libraries # The organization hosting the workshop
 github_username: uwm-libraries # The GitHub username for the workshop author
 website: https://uwm.edu/libraries/ # The website for the workshop author or institution
 description: >-
