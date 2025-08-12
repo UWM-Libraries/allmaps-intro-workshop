@@ -119,6 +119,26 @@ curl <span class="nt">-fsSL</span> https://deb.nodesource.com/setup_20.x | <span
 <span class="nb">sudo </span>apt <span class="nb">install</span> <span class="nt">-y</span> python3-pip python3-venv
 </code></pre></div></div>
 
+<blockquote class="callout tip">
+  <p><strong>macOS/OSX:</strong></p>
+
+  <p>Install Homebrew if not already installed</p>
+
+  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Update system &amp; Homebrew</span>
+softwareupdate <span class="nt">-i</span> <span class="nt">-a</span>
+brew update <span class="o">&amp;&amp;</span> brew upgrade
+
+<span class="c"># Basic developer tools (optional)</span>
+brew <span class="nb">install </span>git curl nano
+
+<span class="c"># Install Node.js 20 (LTS)</span>
+brew <span class="nb">install </span>node@20
+
+<span class="c"># GDAL (geospatial library)</span>
+brew <span class="nb">install </span>gdal
+</code></pre></div>  </div>
+</blockquote>
+
 <h2 id="install-allmaps-cli">Install Allmaps CLI</h2>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm <span class="nb">install</span> <span class="nt">-g</span> @allmaps/cli
@@ -140,6 +160,15 @@ This requires Rust.</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">--proto</span> <span class="s1">'=https'</span> <span class="nt">--tlsv1</span>.2 <span class="nt">-sSf</span> https://sh.rustup.rs | sh
 cargo <span class="nb">install </span>dezoomify-rs
 </code></pre></div></div>
+
+<blockquote class="callout tip">
+  <p><strong>macOS/OSX:</strong></p>
+
+  <p>```bash</p>
+  <h1 id="install-via-homebrew">Install via Homebrew</h1>
+  <p>brew install dezoomify-rs</p>
+
+</blockquote>
 
 <hr />
 
@@ -168,11 +197,27 @@ cargo <span class="nb">install </span>dezoomify-rs
 <span class="nb">cd</span> ~/allmaps/agsl-green-bay
 </code></pre></div></div>
 
-<h3 id="2-download-the-iiif-image">2. Download the IIIF Image</h3>
+<h3 id="2-download-the-georeference-annotation">2. Download the Georeference Annotation</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-L</span> <span class="s2">"https://annotations.allmaps.org/images/82b3f8acb9a05d5b"</span> <span class="nt">-o</span> annotation.json
+</code></pre></div></div>
+
+<p>Swap out <code class="language-plaintext highlighter-rouge">82b3f8acb9a05d5b</code> for whatever Allmaps image you’re trying to work with.</p>
+
+<h3 id="3-download-the-iiif-image">3. Download the IIIF Image</h3>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>allmaps fetch full-image <span class="s2">"https://collections.lib.uwm.edu/digital/iiif/agdm/5922"</span>
 <span class="nb">mv</span> <span class="k">*</span>.jpg 82b3f8acb9a05d5b.jpg
 </code></pre></div></div>
+
+<blockquote class="callout important">
+  <p><strong>Important:</strong></p>
+
+  <p>The <code class="language-plaintext highlighter-rouge">mv</code> command, Unix for “Move”, is being used here to rename the image file.
+Unless you’re working with the same map I am, your filenames will be different.
+What is important is that you keep track of your filename for later steps.</p>
+
+</blockquote>
 
 <p>By default, <code class="language-plaintext highlighter-rouge">allmaps fetch full-image</code> may not download the highest-resolution version.</p>
 
@@ -181,15 +226,10 @@ cargo <span class="nb">install </span>dezoomify-rs
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-s</span> https://collections.lib.uwm.edu/digital/iiif/agdm/5922/info.json | jq <span class="s1">'.sizes'</span>
 </code></pre></div></div>
 
-<p>If the image dimensions listed in the <code class="language-plaintext highlighter-rouge">.vrt</code> file or Allmaps annotation don’t match your downloaded image, use <code class="language-plaintext highlighter-rouge">dezoomify-rs</code>:</p>
+<p>If the image dimensions listed in the Allmaps annotation don’t match your downloaded image, use <code class="language-plaintext highlighter-rouge">dezoomify-rs</code>:</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dezoomify-rs <span class="s2">"https://collections.lib.uwm.edu/digital/iiif/agdm/5922"</span> full.jpg
 <span class="nb">mv </span>full.jpg 82b3f8acb9a05d5b.jpg
-</code></pre></div></div>
-
-<h3 id="3-download-the-georeference-annotation">3. Download the Georeference Annotation</h3>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-L</span> <span class="s2">"https://annotations.allmaps.org/images/82b3f8acb9a05d5b"</span> <span class="nt">-o</span> annotation.json
 </code></pre></div></div>
 
 <h3 id="4-generate-the-geotiff-script">4. Generate the GeoTIFF Script</h3>
@@ -197,14 +237,27 @@ cargo <span class="nb">install </span>dezoomify-rs
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cat </span>annotation.json | allmaps script geotiff <span class="o">&gt;</span> green_bay_geotiff.sh
 </code></pre></div></div>
 
+<p>This will generate a shell script file <code class="language-plaintext highlighter-rouge">green_bay_geotiff.sh</code> that you will run soon.</p>
+
+<p>If you inspect the contents of the file, you will see that the image name is hardcoded into the
+GDAL commands used in the script.
+This is why it’s crucially important to know what you named your image file and that it matches the
+expected name in the annotation.</p>
+
 <h3 id="5-edit-the-script">5. Edit the Script</h3>
 
 <p>Open the script in VS Code or your editor of choice:</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>code green_bay_geotiff.sh
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Visual Studio Code:</span>
+code green_bay_geotiff.sh
+
+<span class="c"># nano</span>
+nano green_bay_geotiff.sh
+
+<span class="c">#etc.</span>
 </code></pre></div></div>
 
-<p>Make these adjustments:</p>
+<p><strong>Make these adjustments:</strong></p>
 
 <ul>
   <li><strong>Remove</strong> any <code class="language-plaintext highlighter-rouge">-cutline_srs</code> flag if present.</li>
@@ -212,6 +265,15 @@ cargo <span class="nb">install </span>dezoomify-rs
   <li><strong>Ensure</strong> the image filename matches: <code class="language-plaintext highlighter-rouge">"82b3f8acb9a05d5b.jpg"</code></li>
   <li><strong>Verify</strong> the output filenames in <code class="language-plaintext highlighter-rouge">gdalwarp</code> and <code class="language-plaintext highlighter-rouge">gdalbuildvrt</code> are consistent, and use <code class="language-plaintext highlighter-rouge">\</code> for line continuation if the command spans multiple lines.</li>
 </ul>
+
+<blockquote class="callout note">
+  <p><strong>Note:</strong></p>
+
+  <p>I’ve opened
+<a href="https://github.com/allmaps/allmaps/issues/261">an issue</a>
+related to this on the Allmaps repo.</p>
+
+</blockquote>
 
 <h3 id="6-run-the-script">6. Run the Script</h3>
 
