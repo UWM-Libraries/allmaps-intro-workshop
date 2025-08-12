@@ -84,14 +84,39 @@
     </nav>
 
     <div class="markdown-body">
-    <h1 id="getting-ready">Getting Ready</h1>
+    <h1 id="lesson-4-allmaps-cli-advanced">Lesson 4: Allmaps CLI (Advanced)</h1>
 
-<p>Note: This assumes some familiarity with the command line in a Unix environment
-(Linux, Mac, or a Unix-like enviornment on a Windows PC),
+<p>In this lesson we will download a IIIF image to our local machine,
+download the IIIF Georeference annotation from allmaps,
+and use command line tools to generate a Cloud-Optimized GeoTIFF
+to use in GIS.</p>
+
+<blockquote class="callout warning">
+  <p><strong>Warning:</strong></p>
+
+  <p>This lesson assumes some familiarity with the command line in a Unix environment
+(Linux, macOS/osX, or a Unix-like enviornment on a Windows PC),
 installing packages, and 
 generating and running scripts from the command line.</p>
 
-<h1 id="windows-only-set-up-wsl">Windows Only: Set up WSL</h1>
+  <p>Never copy-paste code into your terminal unless you understand what it’s doing.
+This lesson requires installing software like the
+<a href="https://www.npmjs.com/package/@allmaps/cli">Allmaps Command Line</a>,
+<a href="https://nodejs.org/en/download">Node.js</a>,
+<a href="https://gdal.org/en/stable/download.html">GDAL</a>,
+<a href="https://github.com/lovasoa/dezoomify-rs">deezoomify-rs</a>,
+and other dependencies.</p>
+
+  <p>Installation and compatability with your environment will vary depending
+on your operating system, OS version, shell environment, etc.</p>
+
+</blockquote>
+
+<p><a class="btn" href="#generating-a-geotiff-using-allmaps-cli">Skip setup instructions</a></p>
+
+<h2 id="environment-setup">Environment Setup</h2>
+
+<h3 id="windows-only-set-up-wsl">Windows Only: Set up WSL</h3>
 
 <p><a href="https://learn.microsoft.com/en-us/windows/wsl/">Windows Subsystem for Linux Documentation</a></p>
 
@@ -99,14 +124,11 @@ generating and running scripts from the command line.</p>
 
 <p><code class="language-plaintext highlighter-rouge">wsl --install -d Ubuntu</code></p>
 
-<p>Now you can launch a Ubuntu environment from your Windows desktop environment.</p>
+<p>Now you can launch a Ubuntu environment from your Windows desktop environment. Follow Linux/Unix instructions below.</p>
 
-<h1 id="environment-setup">Environment Setup</h1>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt update <span class="o">&amp;&amp;</span> <span class="nb">sudo </span>apt upgrade <span class="nt">-y</span>
-
-<span class="c"># Basic developer tools (optional)</span>
-<span class="nb">sudo </span>apt <span class="nb">install</span> <span class="nt">-y</span> build-essential curl git nano
+<h3 id="linuxunix">Linux/Unix</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Update and upgrade package manager</span>
+<span class="nb">sudo </span>apt update <span class="o">&amp;&amp;</span> <span class="nb">sudo </span>apt upgrade <span class="nt">-y</span>
 
 <span class="c"># Install Node.js 20 using NodeSource</span>
 curl <span class="nt">-fsSL</span> https://deb.nodesource.com/setup_20.x | <span class="nb">sudo</span> <span class="nt">-E</span> bash -
@@ -114,84 +136,113 @@ curl <span class="nt">-fsSL</span> https://deb.nodesource.com/setup_20.x | <span
 
 <span class="c"># GDAL (geospatial library)</span>
 <span class="nb">sudo </span>apt <span class="nb">install</span> <span class="nt">-y</span> gdal-bin libgdal-dev
-
-<span class="c"># Python tools (optional)</span>
-<span class="nb">sudo </span>apt <span class="nb">install</span> <span class="nt">-y</span> python3-pip python3-venv
 </code></pre></div></div>
 
-<blockquote class="callout tip">
-  <p><strong>macOS/OSX:</strong></p>
+<h3 id="macososx">macOS/OSX:</h3>
 
-  <p>Install Homebrew if not already installed</p>
+<p>Install Homebrew if not already installed.</p>
 
-  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Update system &amp; Homebrew</span>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Update system &amp; Homebrew</span>
 softwareupdate <span class="nt">-i</span> <span class="nt">-a</span>
 brew update <span class="o">&amp;&amp;</span> brew upgrade
-
-<span class="c"># Basic developer tools (optional)</span>
-brew <span class="nb">install </span>git curl nano
 
 <span class="c"># Install Node.js 20 (LTS)</span>
 brew <span class="nb">install </span>node@20
 
 <span class="c"># GDAL (geospatial library)</span>
 brew <span class="nb">install </span>gdal
-</code></pre></div>  </div>
-</blockquote>
+</code></pre></div></div>
 
-<h2 id="install-allmaps-cli">Install Allmaps CLI</h2>
+<h3 id="install-allmaps-cli-and-dependencies">Install Allmaps CLI and dependencies</h3>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm <span class="nb">install</span> <span class="nt">-g</span> @allmaps/cli
 </code></pre></div></div>
 
-<p>Test it with</p>
+<p>Test it with <code class="language-plaintext highlighter-rouge">allmaps --help</code></p>
 
-<p><code class="language-plaintext highlighter-rouge">allmaps --help</code></p>
+<p>You need the following tools to complete the tasks performed in the leson:</p>
 
-<h2 id="optional-utilities">Optional Utilities</h2>
-
-<p>For clipboard interaction and working with IIIF or bash scripts:</p>
-
-<p><code class="language-plaintext highlighter-rouge">sudo apt install -y xclip jq moreutils</code></p>
-
-<p>Optionally install <a href="https://github.com/lovasoa/dezoomify-rs"><code class="language-plaintext highlighter-rouge">dezoomify-rs</code></a> for full image extraction;
-This requires Rust.</p>
+<p><a href="https://github.com/lovasoa/dezoomify-rs"><code class="language-plaintext highlighter-rouge">dezoomify-rs</code></a>
+for full image extraction;
+<strong>This requires Rust.</strong></p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">--proto</span> <span class="s1">'=https'</span> <span class="nt">--tlsv1</span>.2 <span class="nt">-sSf</span> https://sh.rustup.rs | sh
 cargo <span class="nb">install </span>dezoomify-rs
 </code></pre></div></div>
 
+<p>For clipboard interaction and working with IIIF or bash scripts:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install</span> <span class="nt">-y</span> xclip jq moreutils
+</code></pre></div></div>
+
 <blockquote class="callout tip">
   <p><strong>macOS/OSX:</strong></p>
 
-  <p>```bash</p>
-  <h1 id="install-via-homebrew">Install via Homebrew</h1>
-  <p>brew install dezoomify-rs</p>
+  <p>Install via Homebrew</p>
+
+  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew <span class="nb">install </span>dezoomify-rs
+</code></pre></div>  </div>
+
+  <p>I recommend investigating other dependencies depending on your environment. Brew works best for me on Apple silicon.</p>
 
 </blockquote>
 
 <hr />
 
-<h1 id="generating-a-geotiff-using-allmaps-cli">Generating a GeoTIFF using Allmaps CLI</h1>
+<h2 id="generating-a-geotiff-using-allmaps-cli">Generating a GeoTIFF using Allmaps CLI</h2>
 
 <p>This guide outlines the steps for generating a Cloud Optimized GeoTIFF (COG) of a map of Green Bay from the AGSL collection using the Allmaps CLI and GDAL.</p>
 
-<hr />
+<p>Below under Source Information, you will find URL’s for the map of Green Bay I’m using for this example. 
+It’s a good idea to open up a document and record URLs for the resources you’re working with so it’s easy to copy-paste them.</p>
 
-<h2 id="source-information">Source Information</h2>
+<h3 id="collect-source-information">Collect Source Information:</h3>
 
-<ul>
-  <li><strong>AGSL Item Page</strong>: <a href="https://collections.lib.uwm.edu/digital/collection/agdm/id/5922/">https://collections.lib.uwm.edu/digital/collection/agdm/id/5922/</a></li>
-  <li><strong>IIIF Manifest URL</strong>: <a href="https://collections.lib.uwm.edu/iiif/info/agdm/5922/manifest.json">https://collections.lib.uwm.edu/iiif/info/agdm/5922/manifest.json</a></li>
-  <li><strong>Georeference Annotation</strong>: <a href="https://annotations.allmaps.org/images/82b3f8acb9a05d5b">https://annotations.allmaps.org/images/82b3f8acb9a05d5b</a></li>
-  <li><strong>Allmaps ID</strong>: <code class="language-plaintext highlighter-rouge">afbbbc974346dbbb</code></li>
-  <li><strong>Image ID URL</strong>: <a href="https://collections.lib.uwm.edu/digital/iiif/agdm/5922">https://collections.lib.uwm.edu/digital/iiif/agdm/5922</a></li>
-  <li><strong>Image Filename</strong>: <code class="language-plaintext highlighter-rouge">d30944a32ca34085.jpg</code></li>
-</ul>
-
-<hr />
+<table>
+  <thead>
+    <tr>
+      <th><strong>Source Information</strong></th>
+      <th>Description</th>
+      <th>Value / Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>AGSL Item Page</td>
+      <td>Public-facing item page in the AGSL Digital Map Collection.</td>
+      <td><a href="https://collections.lib.uwm.edu/digital/collection/agdm/id/5922/">https://collections.lib.uwm.edu/digital/collection/agdm/id/5922/</a></td>
+    </tr>
+    <tr>
+      <td>IIIF Manifest URL</td>
+      <td>Machine-readable IIIF manifest describing the image and metadata.</td>
+      <td><a href="https://collections.lib.uwm.edu/iiif/info/agdm/5922/manifest.json">https://collections.lib.uwm.edu/iiif/info/agdm/5922/manifest.json</a></td>
+    </tr>
+    <tr>
+      <td>Georeference Annotation</td>
+      <td>Allmaps annotation storing the georeferencing information.</td>
+      <td><a href="https://annotations.allmaps.org/images/82b3f8acb9a05d5b">https://annotations.allmaps.org/images/82b3f8acb9a05d5b</a></td>
+    </tr>
+    <tr>
+      <td>Allmaps ID</td>
+      <td>Unique identifier for this map in the Allmaps system.</td>
+      <td><code class="language-plaintext highlighter-rouge">afbbbc974346dbbb</code></td>
+    </tr>
+    <tr>
+      <td>Image ID URL</td>
+      <td>IIIF Image API base URL for requesting tiles or derivatives.</td>
+      <td><a href="https://collections.lib.uwm.edu/digital/iiif/agdm/5922">https://collections.lib.uwm.edu/digital/iiif/agdm/5922</a></td>
+    </tr>
+    <tr>
+      <td>Image Filename</td>
+      <td>Original image filename on the server.</td>
+      <td><code class="language-plaintext highlighter-rouge">d30944a32ca34085.jpg</code></td>
+    </tr>
+  </tbody>
+</table>
 
 <h3 id="1-create-a-working-directory">1. Create a Working Directory</h3>
+
+<p>Create a new directory for your image to keep it isolated from other images as you practice generating GeoTIFFs from Allmaps.</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir</span> <span class="nt">-p</span> ~/allmaps/agsl-green-bay
 <span class="nb">cd</span> ~/allmaps/agsl-green-bay
@@ -239,9 +290,11 @@ What is important is that you keep track of your filename for later steps.</p>
 
 <p>This will generate a shell script file <code class="language-plaintext highlighter-rouge">green_bay_geotiff.sh</code> that you will run soon.</p>
 
-<p>If you inspect the contents of the file, you will see that the image name is hardcoded into the
+<p>If you inspect the contents of the file,
+you will see that the image name is hardcoded into the
 GDAL commands used in the script.
-This is why it’s crucially important to know what you named your image file and that it matches the
+This is why it’s crucially important to know what you named your
+image file and that it matches the
 expected name in the annotation.</p>
 
 <h3 id="5-edit-the-script">5. Edit the Script</h3>
@@ -262,7 +315,7 @@ nano green_bay_geotiff.sh
 <ul>
   <li><strong>Remove</strong> any <code class="language-plaintext highlighter-rouge">-cutline_srs</code> flag if present.</li>
   <li><strong>Add</strong> <code class="language-plaintext highlighter-rouge">-multi -wm 2048</code> to the <code class="language-plaintext highlighter-rouge">gdalwarp</code> command. (Include ‘')</li>
-  <li><strong>Ensure</strong> the image filename matches: <code class="language-plaintext highlighter-rouge">"82b3f8acb9a05d5b.jpg"</code></li>
+  <li><strong>Ensure</strong> the image filename matches yours: <code class="language-plaintext highlighter-rouge">"82b3f8acb9a05d5b.jpg"</code></li>
   <li><strong>Verify</strong> the output filenames in <code class="language-plaintext highlighter-rouge">gdalwarp</code> and <code class="language-plaintext highlighter-rouge">gdalbuildvrt</code> are consistent, and use <code class="language-plaintext highlighter-rouge">\</code> for line continuation if the command spans multiple lines.</li>
 </ul>
 
@@ -284,14 +337,15 @@ related to this on the Allmaps repo.</p>
 <ul>
   <li>See above “Download the IIIF Image” step if your image size in wrong.</li>
   <li>Ensure you’ve made the appopriate adjustments in the generated shell script in the “Edit the Script” step above.</li>
+  <li>Triple check your filenames and ensure they match what the shell script expects.</li>
 </ul>
 
 <h3 id="7-verify-the-output-with-gdal">7. Verify the Output with GDAL</h3>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gdalinfo d30944a32ca34085_<span class="k">*</span>.tif
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gdalinfo d30944a32ca34085_<span class="k">*</span><span class="nt">-warped</span>.tif
 </code></pre></div></div>
 
-<p>Check:</p>
+<p><strong>Check:</strong></p>
 
 <ul>
   <li>EPSG:3857 coordinate system</li>
