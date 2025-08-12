@@ -41,6 +41,33 @@ sudo apt install -y gdal-bin libgdal-dev
 sudo apt install -y python3-pip python3-venv
 ```
 
+> **Tip:** For macOS, run the following:
+> ```bash
+> # Install Homebrew if not already installed
+> /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+> echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+> eval "$(/opt/homebrew/bin/brew shellenv)"
+>
+> # Update system & Homebrew
+> softwareupdate -i -a
+> brew update && brew upgrade
+>
+> # Basic developer tools (optional)
+> brew install git curl nano
+>
+> # Install Node.js 20 (LTS)
+> brew install node@20
+> brew link --force --overwrite node@20
+>
+> # GDAL (geospatial library)
+> brew install gdal
+>
+> # Python tools (optional)
+> brew install python
+> ```
+{: .callout .tip }
+
+
 ## Install Allmaps CLI
 
 ```bash
