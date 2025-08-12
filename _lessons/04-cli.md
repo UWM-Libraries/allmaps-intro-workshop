@@ -41,13 +41,9 @@ sudo apt install -y gdal-bin libgdal-dev
 sudo apt install -y python3-pip python3-venv
 ```
 
-> **Tip:** For macOS, run the following:
+> **Tip:** For macOS, try:
+> Install Homebrew if not already installed
 > ```bash
-> # Install Homebrew if not already installed
-> /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-> echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
-> eval "$(/opt/homebrew/bin/brew shellenv)"
->
 > # Update system & Homebrew
 > softwareupdate -i -a
 > brew update && brew upgrade
@@ -57,13 +53,9 @@ sudo apt install -y python3-pip python3-venv
 >
 > # Install Node.js 20 (LTS)
 > brew install node@20
-> brew link --force --overwrite node@20
 >
 > # GDAL (geospatial library)
 > brew install gdal
->
-> # Python tools (optional)
-> brew install python
 > ```
 {: .callout .tip }
 
@@ -91,6 +83,14 @@ This requires Rust.
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 cargo install dezoomify-rs
 ```
+
+> **Tip:** To install **dezoomify-rs** on macOS:
+> ```bash
+> # Install via Homebrew
+> brew install dezoomify-rs
+>
+{: .callout .tip }
+
 
 --------------------
 
