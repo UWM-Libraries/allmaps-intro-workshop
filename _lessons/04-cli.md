@@ -33,6 +33,7 @@ to use in GIS.
 {: .callout .warning }
 
 <a class="btn" href="#generating-a-geotiff-using-allmaps-cli">Skip setup instructions</a>
+<a class="btn" href="{{ '/lessons/fun' | relative_url }}">🕹️ Have fun instead</a>
 
 ## Environment Setup
 
