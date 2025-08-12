@@ -108,7 +108,9 @@ sudo apt install -y xclip jq moreutils
 > brew install dezoomify-rs
 > ```
 > 
-> I recommend investigating other dependencies depending on your environment. Brew works best for me on Apple silicon.
+> I recommend investigating other dependencies depending on your environment.
+> [Homebrew](https://brew.sh/)
+> works best for me on Apple silicon.
 >
 {: .callout .tip }
 
