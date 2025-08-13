@@ -7,17 +7,7 @@ permalink: /lessons/Georef-and-IIIF/
 
 # Lesson 1: Georeferencing and IIIF
 
-## [here.allmaps.org](https://here.allmaps.org)
-
-Go to [here.allmaps.org](https://here.allmaps.org) in your browser and, if prompted, allow the website to access your location.
-
-The maps returned are maps that have been **georeferenced** using the Allmaps platform. They're all maps held in digital collections—for example,
-the [AGSL Digital Map Collection](https://uwm.edu/lib-collections/agsl-digital-map-collection/).
-In fact, any map in our collection can be used, and so can maps from any collection that uses **IIIF**, the **International Image Interoperability Framework**.
-
-## Georeferencing
-
-### What is Georeferencing?
+## What is Georeferencing?
 
 [Georeferencing](https://en.wikipedia.org/wiki/Georeferencing) is the process of overlaying a digital image on a map by matching pixels on the image to real geographic locations. This is commonly done with aerial and satellite photography to transform photographs into usable spatial data.
 
@@ -70,7 +60,7 @@ Take a look at the AGSL's treasured [Leardo Mappamundi](https://collections.lib.
 Clicking on the expand arrows allows us to view the map in stunning detail directly in the browser—no need to download huge image files.
 But beyond making images zoomable, IIIF enables much more...
 
-### Finding IIIF maps to use in Allmaps
+## Finding IIIF maps to use in Allmaps
 
 **Allmaps** works best with large-scale maps—such as city, county, state, or country maps.
 While it’s possible to georeference small-scale maps (like world maps), distortion introduced by the georeferencing process—especially in **Web Mercator**—can make them harder to work with.
