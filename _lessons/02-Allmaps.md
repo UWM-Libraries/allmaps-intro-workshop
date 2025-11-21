@@ -78,19 +78,17 @@ The **Results** tab gives you a preview of the map with georeferencing applied. 
 
 As of Fall 2025, this image is a bit out of date.
 
-In the upper right, under export, you’ll see a drawer with more tools:
+In the upper right, under **export**, you’ll see a drawer with more tools:
 
 - Link to view in Allmaps Viewer
 - Link to the annotation
 - **Code** – shows the actual Georeference Annotation (JSON format). You can copy and reuse this in the Viewer.
 - XYZ tile link (usable in web maps or GIS software)
 
-On the bottom right, under maps you can find:
+On the bottom right, under **maps** you can find:
 
 - **Transoformation** and **Projection** to modify the spatial information 
 - **GCP List** – lists all your points; delete ones that don't work
-
-- **Share** – provides:
 
 ![The share menu in Allmaps]({{ '/assets/images/georef_nz6_Share.png' | relative_url }})
 
