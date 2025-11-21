@@ -76,16 +76,21 @@ The **Results** tab gives you a preview of the map with georeferencing applied. 
 
 ![Preview of results in Allmaps]({{ '/assets/images/georef_nz5_result.png' | relative_url }})
 
-In the bottom right, you’ll see a drawer with more tools:
+As of Fall 2025, this image is a bit out of date.
 
-- **Information** – about the IIIF resource
-- **GCP List** – lists all your points; delete ones that don't work
+In the upper right, under export, you’ll see a drawer with more tools:
+
+- Link to view in Allmaps Viewer
+- Link to the annotation
 - **Code** – shows the actual Georeference Annotation (JSON format). You can copy and reuse this in the Viewer.
+- XYZ tile link (usable in web maps or GIS software)
+
+On the bottom right, under maps you can find:
+
+- **Transoformation** and **Projection** to modify the spatial information 
+- **GCP List** – lists all your points; delete ones that don't work
+
 - **Share** – provides:
-  - Link to view in Allmaps Viewer
-  - Link to the annotation
-  - GeoJSON download
-  - XYZ tile link (usable in web maps or GIS software)
 
 ![The share menu in Allmaps]({{ '/assets/images/georef_nz6_Share.png' | relative_url }})
 
