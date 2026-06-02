@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Paris road overlay</title>
+    <style>
+      body {
+        margin: 0;
+      }
+
+      svg {
+        display: block;
+        width: 100vw;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+
+    <script>
+      const width = 10784
+      const height = 6941
+      const imageUrl =
+        'https://cdm17272.contentdm.oclc.org/iiif/2/agdm:1550/full/full/0/default.jpg'
+
+      async function main() {
+        const transformedSvg = await fetch('voiries1300_2009.svg').then(
+          (response) => response.text()
+        )
+
+        const roadLines = transformedSvg
+          .replace('<svg xmlns="http://www.w3.org/2000/svg">', '')
+          .replace('</svg>', '')
+          .replaceAll(
+            '<polyline ',
+            '<polyline style="stroke: #00ffff; fill: none; stroke-width: 10; stroke-linecap: round; stroke-linejoin: round;" '
+          )
+
+        document.querySelector('#map').innerHTML = `
+          <svg viewBox="0 0 ${width} ${height}" width="${width}" height="${height}">
+            <image href="${imageUrl}" width="${width}" height="${height}" />
+            ${roadLines}
+          </svg>
+        `
+      }
+
+      main()
+    </script>
+  </body>
+</html>
