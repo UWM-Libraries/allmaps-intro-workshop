@@ -1,16 +1,19 @@
 ---
 layout: lesson
-title: "Lesson 4: Allmaps CLI (Advanced)"
+title: "Lesson 4: Exporting a GeoTIFF with Allmaps CLI"
 position: 4
-permalink: /lessons/cli/
+permalink: /lessons/geotiff-export/
 ---
 
-# Lesson 4: Allmaps CLI (Advanced)
+# Lesson 4: Exporting a GeoTIFF with Allmaps CLI
 
 In this lesson we will download a IIIF image to our local machine,
-download the IIIF Georeference annotation from allmaps,
+download the IIIF georeference annotation from Allmaps,
 and use command line tools to generate a Cloud-Optimized GeoTIFF
 to use in GIS.
+
+This lesson focuses on one Allmaps CLI workflow: GeoTIFF export.
+We will use the CLI for other advanced workflows in the next lessons.
 
 > **Warning:** 
 > 
@@ -33,6 +36,7 @@ to use in GIS.
 {: .callout .warning }
 
 <a class="btn" href="#generating-a-geotiff-using-allmaps-cli">Skip setup instructions</a>
+<a class="btn" href="{{ '/lessons/geojson-overlay' | relative_url }}">Next CLI workflow: GeoJSON overlay</a>
 <a class="btn" href="{{ '/lessons/fun' | relative_url }}">🕹️ Have fun instead</a>
 
 ## Environment Setup

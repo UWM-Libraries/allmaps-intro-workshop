@@ -15,6 +15,8 @@ Welcome to **{{ site.title }}!**
 * View the georeferenced map in Viewer 
 * Use the Georeferenced map in GIS
 * Use the Allmaps CLI to generate Cloud Optimized GeoTIFFs
+* Transform GeoJSON for display on a IIIF image
+* Use an Allmaps annotation in a Leaflet web map
 
 ## Resources
 
