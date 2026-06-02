@@ -1,11 +1,11 @@
 ---
 layout: lesson
-title: "Lesson 7: Fun with Allmaps!"
-position: 7
+title: "Lesson 8: Fun with Allmaps!"
+position: 8
 permalink: /lessons/fun/
 ---
 
-# Lesson 7: Fun with Allmaps!
+# Lesson 8: Fun with Allmaps!
 
 Not feeling like learning the command line interface for Allmaps? Have fun instead!
 

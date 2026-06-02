@@ -1,11 +1,11 @@
 ---
 layout: lesson
-title: "Lesson 6: Using an Allmaps Annotation in Leaflet"
-position: 6
+title: "Lesson 7: Using an Allmaps Annotation in Leaflet"
+position: 7
 permalink: /lessons/leaflet-annotation/
 ---
 
-# Lesson 6: Using an Allmaps Annotation in Leaflet
+# Lesson 7: Using an Allmaps Annotation in Leaflet
 
 This lesson will adapt the Leaflet workflow from `../ph-allmaps/part-3/03_leaflet.md`.
 

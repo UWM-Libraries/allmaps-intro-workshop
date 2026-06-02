@@ -1,11 +1,11 @@
 ---
 layout: lesson
-title: "Lesson 5: Overlaying GeoJSON on a IIIF Image"
-position: 5
+title: "Lesson 6: Overlaying GeoJSON on a IIIF Image"
+position: 6
 permalink: /lessons/geojson-overlay/
 ---
 
-# Lesson 5: Overlaying GeoJSON on a IIIF Image
+# Lesson 6: Overlaying GeoJSON on a IIIF Image
 
 This lesson will adapt the GeoJSON overlay workflow from `../ph-allmaps/part-3/01_geojson.md`.
 
@@ -31,7 +31,7 @@ The goal is to use an Allmaps georeference annotation to transform geographic Ge
 ## Setup Note
 
 This lesson uses the Allmaps CLI and `jq`.
-Installation details live in [Lesson 4: Exporting a GeoTIFF with Allmaps CLI]({{ '/lessons/geotiff-export/' | relative_url }}) for now.
+Installation details live in [Lesson 4: Command Line Setup]({{ '/lessons/command-line-setup/' | relative_url }}) for now.
 
 <!-- TODO: Decide whether to copy the Paris data files into this workshop repo or point learners to starter files. -->
 <!-- TODO: Adapt the PH prose into this workshop voice without making this page as long as the publication lesson. -->

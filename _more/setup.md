@@ -8,4 +8,4 @@ published: true
 
 # Setup Instructions
 
-This page is where you can put your workshop setup instructions.
+Workshop setup now lives in [Lesson 4: Command Line Setup]({{ '/lessons/command-line-setup/' | relative_url }}).
