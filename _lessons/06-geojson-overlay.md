@@ -7,6 +7,8 @@ permalink: /lessons/geojson-overlay/
 
 # Lesson 6: Overlaying GeoJSON on a IIIF Image
 
+Before starting, make sure you have completed [Lesson 4: Command Line Setup]({{ '/lessons/command-line-setup/' | relative_url }}) or already have the required tools installed.
+
 This lesson will adapt the GeoJSON overlay workflow from `../ph-allmaps/part-3/01_geojson.md`.
 
 The goal is to use an Allmaps georeference annotation to transform geographic GeoJSON into image-space SVG, then draw that SVG on top of the original unwarped IIIF image.

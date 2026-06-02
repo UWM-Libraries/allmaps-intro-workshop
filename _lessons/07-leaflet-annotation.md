@@ -7,6 +7,9 @@ permalink: /lessons/leaflet-annotation/
 
 # Lesson 7: Using an Allmaps Annotation in Leaflet
 
+Before starting, make sure you have completed [Lesson 4: Command Line Setup]({{ '/lessons/command-line-setup/' | relative_url }}) or already have the required tools installed.
+
+
 This lesson will adapt the Leaflet workflow from `../ph-allmaps/part-3/03_leaflet.md`.
 
 The goal is to use the Allmaps Leaflet plugin to add a georeferenced historical map as an overlay in a Leaflet web map.
