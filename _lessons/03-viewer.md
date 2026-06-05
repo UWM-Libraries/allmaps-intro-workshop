@@ -11,10 +11,13 @@ permalink: /lessons/viewer/
 
 [Allmaps Viewer](https://viewer.allmaps.org) is used to view georeferenced maps in Allmaps. Similar to the **Results** tab in the Editor, you can see the map overlaid on a web map.
 The Viewer also includes **additional tools** that let you customize the appearance and functionality of your map.
+Viewer is not used to georeference maps.
+Instead, it is used for inspecting results and assessing how a warped historical map behaves in relation to modern geography.
 
 Common tools (found at the bottom of the screen) include sliders that control **layer transparency/opacity** and **background removal**.
 
-Background removal is especially useful with historical maps—it removes the blank paper and allows the cartographic information to shine.
+Background removal is especially useful with historical maps.
+It removes the blank paper and helps isolate printed geographic content from the scanned page, making overlays easier to interpret.
 
 ![Background removal comparison in Allmaps Viewer]({{ '/assets/images/georef_nz8_Background.png' | relative_url }})
 
@@ -22,8 +25,7 @@ Keyboard shortcuts:
 
 - <kbd>Space</kbd> – Toggle transparency on/off
 - <kbd>B</kbd> – Toggle background removal
-- <kbd>M</kbd> – Display the mask
-- <kbd>T</kbd> – Change the transformation algorithm
+- <kbd>M</kbd> – Toggle display of the mask line
 - <kbd>G</kbd> – Display a grid over the image
 - <kbd>D</kbd> – Cycle display of distortions: surface deformation, angle distortion, or none
 
@@ -45,20 +47,15 @@ Yellow warning symbols indicate maps with masks but no georeferencing yet:
 
 ![Example of stitched atlas sheets in Allmaps Viewer]({{ '/assets/images/MultiPageStitch.png' | relative_url }})
 
+Since these atlas pages were carefully masked, they mosaic almost seamlessly, allowing you to explore the whole atlas at once.
+This kind of stitching takes careful work: small differences in mask placement or GCPs can create visible gaps or overlaps between sheets.
+
+Using <kbd>M</kbd> to display the mask lines shows how all the component maps fit together.
+
 When working with multi-sheet objects:
 
 - <kbd>[</kbd> and <kbd>]</kbd> – Cycle through maps
-- <kbd>Right Click</kbd> – Change map layer order
-
-## Changing the Transformation Algorithm
-
-As we covered in Lesson 2, ground control points (GCPs) define locations where features match across old and new maps. A transformation algorithm uses these points to warp the image accordingly.
-
-Cycle through algorithms using <kbd>T</kbd>.
-
-Different algorithms will produce different results. Some stretch or distort the image more than others—this is known as **rubber sheeting**.
-
-![Comparison of different transformation algorithms]({{ '/assets/images/transform.gif' | relative_url }})
+- Open the map context menu, for example by right-clicking – Change map layer order
 
 ## Using XYZ Tiles in GIS
 
@@ -82,6 +79,16 @@ Now you can use your georeferenced map directly in desktop GIS!
 ![Georeferenced map shown inside QGIS]({{ '/assets/images/QGIS3.png' | relative_url }})
 
 You can even use the **Export** tool to save the result as a **GeoTIFF**, a standard format for georeferenced images.
+
+> **Note:**
+>
+> Use the Allmaps Tile Server for testing desktop GIS workflows or other software that needs an XYZ tile URL.
+> Because each requested tile has to be fetched, warped, and returned by a server, tiles may load slowly, break, or stop working.
+>
+> For web maps you control, Allmaps Viewer or the Allmaps plugins for OpenLayers and Leaflet are usually better choices because they can warp IIIF images directly in the browser.
+> This means the browser does the transformation work instead of depending on a tile server for every map tile.
+>
+{: .callout .note }
 
 More info on the Allmaps Tile Server is available in this [Observable notebook](https://observablehq.com/@allmaps/allmaps-tile-server).
 
