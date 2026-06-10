@@ -33,6 +33,7 @@ This uses the same Paris map as [Lesson 5: Exporting a GeoTIFF with Allmaps CLI]
 | Prepared geometry stream | [voiries1300_2009_clean.geometries.ndjson]({{ '/assets/data/paris-overlay/voiries1300_2009_clean.geometries.ndjson' | relative_url }}) |
 | Frozen annotation file | [annotation.json]({{ '/assets/data/paris-overlay/annotation.json' | relative_url }}) |
 | HTML starter | [paris-road-overlay.html]({{ '/assets/data/paris-overlay/paris-road-overlay.html' | relative_url }}) |
+| Lesson file package | [lesson-06-paris-overlay-files.zip]({{ '/assets/downloads/lesson-06-paris-overlay-files.zip' | relative_url }}) |
 
 ### Data Note
 
@@ -65,13 +66,17 @@ cd ~/allmaps/agsl-paris-overlay
 
 ## 2. Download the Lesson Files
 
-Download the frozen annotation, the cleaned GeoJSON, the prepared geometry stream, and the HTML starter:
+Download the frozen annotation, the cleaned GeoJSON, the prepared geometry stream, and the HTML starter as one ZIP package:
+
+<a class="btn" href="{{ '/assets/downloads/lesson-06-paris-overlay-files.zip' | relative_url }}">Download lesson files</a>
+
+If you download the ZIP file in your browser, unzip it and place the four files in your `~/allmaps/agsl-paris-overlay` working directory.
+
+From the command line, download and unzip the package:
 
 ```bash
-curl -L "{{ site.url }}{{ site.baseurl }}/assets/data/paris-overlay/annotation.json" -o annotation.json
-curl -L "{{ site.url }}{{ site.baseurl }}/assets/data/paris-overlay/voiries1300_2009_clean.json" -o voiries1300_2009_clean.json
-curl -L "{{ site.url }}{{ site.baseurl }}/assets/data/paris-overlay/voiries1300_2009_clean.geometries.ndjson" -o voiries1300_2009_clean.geometries.ndjson
-curl -L "{{ site.url }}{{ site.baseurl }}/assets/data/paris-overlay/paris-road-overlay.html" -o paris-road-overlay.html
+curl -L "{{ site.url }}{{ site.baseurl }}/assets/downloads/lesson-06-paris-overlay-files.zip" -o lesson-06-paris-overlay-files.zip
+unzip lesson-06-paris-overlay-files.zip
 ```
 
 Because Allmaps georeferencing data can be edited, this lesson uses a frozen local copy of the Paris georeference annotation.

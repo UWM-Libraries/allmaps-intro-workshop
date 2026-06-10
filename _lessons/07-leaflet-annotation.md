@@ -27,17 +27,20 @@ The folder contains three files:
 - `script.js`: the JavaScript that creates the Leaflet map, base map, and Allmaps overlay
 - `style.css`: the CSS that makes the map visible
 
-Open the folder in a text editor such as VS Code.
+Download the prepared demo package:
 
-To download a local copy from the workshop site, create a working directory and fetch the files:
+<a class="btn" href="{{ '/assets/downloads/lesson-07-leaflet-demo-files.zip' | relative_url }}">Download demo files</a>
+
+If you download the ZIP file in your browser, unzip it and open the folder in a text editor such as VS Code.
+
+From the command line, create a working directory, then download and unzip the package:
 
 ```bash
 mkdir -p ~/allmaps/allmaps-leaflet-demo
 cd ~/allmaps/allmaps-leaflet-demo
 
-curl -L "{{ site.url }}{{ site.baseurl }}/assets/allmaps-leaflet-demo/index.html" -o index.html
-curl -L "{{ site.url }}{{ site.baseurl }}/assets/allmaps-leaflet-demo/script.js" -o script.js
-curl -L "{{ site.url }}{{ site.baseurl }}/assets/allmaps-leaflet-demo/style.css" -o style.css
+curl -L "{{ site.url }}{{ site.baseurl }}/assets/downloads/lesson-07-leaflet-demo-files.zip" -o lesson-07-leaflet-demo-files.zip
+unzip lesson-07-leaflet-demo-files.zip
 ```
 
 ## Preview the Map
