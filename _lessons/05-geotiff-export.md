@@ -153,10 +153,12 @@ gdalwarp \
 
 This command uses [`gdalwarp`](https://gdal.org/en/stable/programs/gdalwarp.html) to apply the georeferencing from the annotation and generate a georeferenced raster.
 
-Before running the script, make the following adjustment:
+Before running the script, check whether you need to edit it.
+With current versions of GDAL, the generated script may run as-is.
+However, editing the script is still useful when you need compatibility with older GDAL versions or want to set processing options such as memory limits.
 
-**Remove** the `-cutline_srs` flag.
-This option is not supported in all GDAL versions and may cause the script to fail.
+**For older GDAL versions:** remove the `-cutline_srs` flag.
+The [`-cutline_srs` option](https://gdal.org/en/stable/programs/gdalwarp.html#cmdoption-gdalwarp-cutline_srs) was added in GDAL 3.9, so scripts that include it may fail on earlier GDAL installations.
 
 Before:
 
@@ -170,15 +172,14 @@ After:
 -cutline ./adeae8a56aaf59fb_2543dadd9c2fa8b1.geojson -crop_to_cutline \
 ```
 
-If you have sufficient available memory (RAM), you can speed up processing by adding `-multi -wm 2048`.
+**Optional performance tuning:** if you have sufficient available memory (RAM), you can speed up processing by adding `-multi -wm 2048`.
 On low-memory systems, this may cause the command to fail.
-
-**Add** `-multi -wm 2048` to the `gdalwarp` command.
+If you are using a current GDAL version and only want to tune performance, you can leave `-cutline_srs "EPSG:4326"` in place and add `-multi -wm 2048` on the next line.
 
 Each line in a multi-line command must end with `\`, except the final line.
 If a line is missing `\`, the command will terminate early and cause errors such as `command not found` or `No target filename specified`.
 
-Your updated `gdalwarp` command block should read like this:
+If you remove `-cutline_srs` and add the memory options, your updated `gdalwarp` command block should read like this:
 
 ```bash
 gdalwarp \
